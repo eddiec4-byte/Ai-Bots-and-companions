@@ -61,7 +61,7 @@ h1{
   transition:.2s ease;overflow:hidden;
 }
 .card::before{
-  content:"";position:absolute;inset:0;border-radius:18px;padding:1px;
+  content:"";position:absolute;inset:0;border-radius:18px;padding:1px;pointer-events:none;
   background:linear-gradient(135deg,rgba(124,92,255,.5),transparent 40%);
   -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
   -webkit-mask-composite:xor;mask-composite:exclude;opacity:0;transition:.2s;
