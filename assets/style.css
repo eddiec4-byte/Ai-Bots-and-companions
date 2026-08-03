@@ -113,4 +113,8 @@ pre{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:
 .product-img span{filter:drop-shadow(0 6px 16px rgba(0,0,0,.4))}
 .product-img-lg{height:200px;font-size:96px;border-radius:18px;margin:0 0 22px}
 .stars{color:#f5c518;font-size:15px;margin:0 0 8px;letter-spacing:1px}
+.faqs{margin:22px 0}
+.faq{border-left:3px solid var(--accent);background:rgba(255,255,255,.03);padding:10px 14px;margin:10px 0;border-radius:0 8px 8px 0}
+.faq h4{margin:0 0 4px;font-size:15px;color:var(--text)}
+.faq p{margin:0;color:var(--muted);font-size:14px}
 @media(max-width:640px){.grid{grid-template-columns:1fr}}
