@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://eddiec4-byte.github.io/Ai-Bots-and-companions/sitemap.xml

@@ -1,0 +1,25 @@
+{
+  "amazon_tag": "aibots00-20",
+  "site_url": "https://eddiec4-byte.github.io/Ai-Bots-and-companions",
+  "brand_links": {
+    "Ropet": "https://www.ropet.ai/",
+    "Moflin": "https://www.casio.com/us/moflin/",
+    "Lovot": "https://lovot.life/",
+    "Loona": "https://keyirobot.com/",
+    "Moxie": "https://moxierobots.com/",
+    "ElliQ": "https://elliq.com/"
+  },
+  "link_check": {
+    "date": "2026-08-03",
+    "method": "GET with desktop UA, follow redirects",
+    "results": {
+      "Ropet": "200 https://www.ropet.ai/",
+      "Moflin": "200 https://www.casio.com/us/moflin/ (casio.com root returned 403 to bots)",
+      "Lovot": "200 https://lovot.life/ (www.lovot.life DNS NXDOMAIN - fixed)",
+      "Loona": "200 https://keyirobot.com/ (loona.cc returned 523 - fixed)",
+      "Moxie": "200 https://moxierobots.com/ (embody.me was wrong host, connection refused - fixed)",
+      "ElliQ": "200 https://elliq.com/"
+    }
+  },
+  "notes": "Fill amazon_tag with your Amazon Associates ID (e.g. companionin-20). The daily generator auto-injects it into all 'Buy' links. Brand-direct links can be swapped for your own referral URLs."
+}
