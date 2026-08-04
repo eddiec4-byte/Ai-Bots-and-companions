@@ -118,3 +118,6 @@ pre{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:
 .faq h4{margin:0 0 4px;font-size:15px;color:var(--text)}
 .faq p{margin:0;color:var(--muted);font-size:14px}
 @media(max-width:640px){.grid{grid-template-columns:1fr}}
+
+.crumbs{font-size:.85rem;opacity:.75;margin:14px 0 4px}
+.crumbs .sep{opacity:.5;margin:0 2px}
