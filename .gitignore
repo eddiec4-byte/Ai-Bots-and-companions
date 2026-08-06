@@ -1,3 +1,5 @@
 generate.py
 DEPLOY.md
 deploy.sh
+secrets.*.json
+secrets.pinterest.json

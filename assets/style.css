@@ -110,8 +110,12 @@ pre{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:
   background:linear-gradient(135deg,rgba(124,92,255,.35),rgba(34,211,238,.22));
   font-size:54px;line-height:1;
 }
-.product-img span{filter:drop-shadow(0 6px 16px rgba(0,0,0,.4))}
-.product-img-lg{height:200px;font-size:96px;border-radius:18px;margin:0 0 22px}
+.mono{width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  font-size:26px;font-weight:800;color:#fff;text-transform:uppercase;letter-spacing:.02em;
+  background:linear-gradient(135deg,var(--accent),var(--pink));
+  box-shadow:0 8px 24px rgba(0,0,0,.45),inset 0 0 0 1px rgba(255,255,255,.18)}
+.mono-lg{width:112px;height:112px;font-size:48px}
+.product-img-lg{height:200px;border-radius:18px;margin:0 0 22px}
 .stars{color:#f5c518;font-size:15px;margin:0 0 8px;letter-spacing:1px}
 .faqs{margin:22px 0}
 .faq{border-left:3px solid var(--accent);background:rgba(255,255,255,.03);padding:10px 14px;margin:10px 0;border-radius:0 8px 8px 0}
