@@ -64,7 +64,28 @@ def lint_all():
         scan(f"LONGTAIL {t['slug']} intro", t.get("intro", ""))
         for q, a in t.get("faqs", []):
             scan(f"LONGTAIL {t['slug']} faq", a)
+    # Guarantee: every PRIMARY product buy link must be an AMAZON link (so the
+    # Associate earns), and either a verified dp/ASIN (exact product) or a
+    # same-product /s?k= search. No brand-official / dead-domain links as buys.
+    for p in generate.PRODUCTS:
+        link = generate.product_link(p)
+        if "amazon.com" not in link:
+            problems.append(
+                f"EXACT-LINK {p['name']}: primary buy link is NOT Amazon "
+                f"({link}) — must be amazon.com dp/ASIN or same-product search")
+        if "/s?" in link or "/s?k=" in link:
+            if "tag=" not in link:
+                problems.append(
+                    f"EXACT-LINK {p['name']}: Amazon search buy link missing "
+                    f"associate tag ({link})")
+        if "amazon.com/dp/" in link:
+            asin = link.split("/dp/")[1].split("?")[0]
+            if asin not in generate.AMAZON_ASIN.values():
+                problems.append(
+                    f"EXACT-LINK {p['name']}: dp/ASIN {asin} is not in the "
+                    f"verified amazon_asin map")
     return problems
+
 
 
 if __name__ == "__main__":

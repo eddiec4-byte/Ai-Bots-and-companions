@@ -10,19 +10,29 @@
     "Loona": "https://keyirobot.com/",
     "Moxie": "https://moxierobots.com/",
     "ElliQ": "https://elliq.com/",
-    "Aibo": "https://us.aibo.com/"
+    "Aibo": "https://us.aibo.com/",
+    "Eilik": "https://energizelab.com/",
+    "Vector": "https://digitaldreamlabs.com/",
+    "Emo": "https://living.ai/",
+    "Jennie": "https://tombot.com/"
+  },
+  "amazon_asin": {
+    "Eilik": "B09XGQMSMB",
+    "Aibi": "B0F1TH7D65",
+    "EmoPet": "B0DDT2MT9K",
+    "Moxie": "B07984JN3L"
+  },
+  "asin_verified": {
+    "Eilik": "Energize Lab Eilik - desktop companion (IN STOCK, checked 2026-08-06)",
+    "Aibi": "Aibi Pocket Pet - Living.AI wearable robot (IN STOCK, checked 2026-08-06)",
+    "EmoPet": "EMOPET AI Desk Robot Companion - Living.AI (IN STOCK, checked 2026-08-06)",
+    "Moxie": "Moxie robot by Embodied (IN STOCK, checked 2026-08-06)"
   },
   "link_check": {
-    "date": "2026-08-03",
-    "method": "GET with desktop UA, follow redirects",
-    "results": {
-      "Ropet": "200 https://www.ropet.ai/",
-      "Moflin": "200 https://www.casio.com/us/moflin/ (casio.com root returned 403 to bots)",
-      "Lovot": "200 https://lovot.life/ (www.lovot.life DNS NXDOMAIN - fixed)",
-      "Loona": "200 https://keyirobot.com/ (loona.cc returned 523 - fixed)",
-      "Moxie": "200 https://moxierobots.com/ (embody.me was wrong host, connection refused - fixed)",
-      "ElliQ": "200 https://elliq.com/"
-    }
+    "date": "2026-08-06",
+    "method": "Amazon US dp/ASIN title + 'Currently unavailable' scrape",
+    "policy": "Featured catalog contains ONLY products with a verified, in-stock Amazon ASIN. Every primary buy link is an exact dp/ASIN (locale-safe). Products without a verified in-stock ASIN are NOT featured.",
+    "removed_unavailable_or_not_listed": ["Ropet (no ASIN / parked domain)", "Moflin (no ASIN)", "Lovot (no ASIN)", "Loona (no in-stock ASIN; B0C2C9LJNQ is an Eilik alias)", "ElliQ (no ASIN)", "Aibo (no ASIN)", "Vector (B0FV3M8GWW UNAVAILABLE)", "LOOI (B0F1YWF96K UNAVAILABLE)", "Jennie (no ASIN)"]
   },
-  "notes": "Fill amazon_tag with your Amazon Associates ID (e.g. companionin-20). The daily generator auto-injects it into all 'Buy' links. Brand-direct links can be swapped for your own referral URLs."
+  "notes": "IMPORTANT: only list products here that are VERIFIED in-stock on Amazon. amazon_asin keys MUST match product names in generate.py PRODUCTS. Never guess ASINs. Vector/LOOI were removed because they were 'Currently unavailable'. Loona's apparent ASIN B0C2C9LJNQ actually resolves to Eilik (alias) so Loona has no real listing."
 }
