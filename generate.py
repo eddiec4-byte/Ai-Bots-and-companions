@@ -76,6 +76,12 @@ PRODUCTS = [
      "review":"Moxie exists for a specific and genuinely important job: helping children grow socially and emotionally through play. Created by Embodied, it is built on child-development research and runs gentle, structured conversations and activities designed to build empathy, turn-taking, and confidence over weeks of use. Parents stay in control through a companion app that surfaces progress and sets the pace, which matters for a device aimed at young users. Moxie is deliberately narrow — it is a learning companion, not a general assistant or a toy with open-ended play — and it carries a content subscription that unlocks its ongoing curriculum. Within that lane, though, it is thoughtful and unusually well-executed, with a tone that feels encouraging rather than instructive. For a parent weighing whether a companion robot can support a child's social growth — particularly neurodiverse children or those who benefit from low-pressure practice — Moxie is the most purpose-built, research-backed option on the market."},
 ]
 
+PRODUCTS.append({"name":"Loona","maker":"KEYi Tech","blurb":"Mobile petbot companion robot that drives around the room, tracks people and reacts like a curious pet.","kw":"Loona robot KEYi Tech petbot",
+     "emoji":"\U0001f436",
+     "pros":["Actually mobile — drives around, not desk-bound","Camera-based person and object tracking","Two variants: Petbot and Deskmate","Active firmware updates from KEYi Tech"],
+     "cons":["Larger and pricier than desk companions","Needs floor space to be fun","Amazon listing varies — verify the seller"],
+     "review":"Loona is the one that moves. Where most AI companions sit still and emote, KEYi Tech's petbot drives itself around a room on a wheeled base, uses its camera to follow people and objects, and behaves with the restless curiosity of a small animal rather than a gadget waiting to be poked. KEYi currently lists two variants on its official site — Loona Petbot, the roaming home companion, and Loona Deskmate, a smaller desk-bound sibling — so the line covers both floor-level play and workspace presence (verified live on keyirobot.com this run). The trade-offs are physical: it is bigger and costlier than an Eilik or an Aibi, and it wants floor space to be entertaining, which makes it a poor fit for a cramped desk. Buy it if you want a companion that comes to you instead of waiting to be picked up; skip it if a corner of a desk is all you have to spare."})
+
 def product_card(p):
     url = product_link(p)
     slug = p["name"].lower()
@@ -197,6 +203,7 @@ BUYER_INTENT = [
     {"label":"AI Pet Robots for Adults","product":"Aibi"},
     {"label":"Robot Companions for Seniors","product":"EmoPet"},
     {"label":"Learning Robots for Kids","product":"Moxie"},
+    {"label":"Mobile Robot Pets That Roam","product":"Loona"},
 ]
 
 def build_best_of():
