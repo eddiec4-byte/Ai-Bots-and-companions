@@ -214,7 +214,7 @@ def build_review(p):
 BUYER_INTENT = [
     {"label":"Best Companion Robots 2026","product":"Eilik"},
     {"label":"AI Pet Robots for Adults","product":"Aibi"},
-    {"label":"Robot Companions for Seniors","product":"EmoPet"},
+    {"label":"Robot Companions for Seniors","product":"ElliQ"},
     {"label":"Learning Robots for Kids","product":"Moxie"},
     {"label":"Mobile Robot Pets That Roam","product":"Loona"},
 ]
@@ -227,10 +227,25 @@ def build_best_of():
         rows += f'''<div class="card"><h3>{html.escape(b['label'])}</h3>
 <p>Our top in-stock pick on Amazon — {html.escape(p['name'] if p else b['label'])}.</p>
 <a class="buy" href="{html.escape(link)}" rel="noopener">Shop {html.escape(b['label'])} on Amazon ↗</a></div>'''
+    FAQ = [
+        ("What is the best AI companion robot to buy in 2026?",
+         "It depends on the job. For a fun, expressive desk presence, Eilik is the standout. For a pocket companion you can carry, Aibi or EmoPet lead. For a child's social-emotional growth, Moxie is the research-backed pick. For older adults living alone, ElliQ is purpose-built for wellbeing. Every link above opens the exact in-stock Amazon product page."),
+        ("Are companion robots worth the money?",
+         "If you want personality, company, or a researched learning tool, yes — but match the product to the goal. Desk companions like Eilik deliver character per dollar; seniors-focused ElliQ and kids-focused Moxie earn their price through specialized, maintained software. Read each review's pros and cons before buying."),
+        ("Which companion robot is best for seniors or lonely older adults?",
+         "ElliQ, by Intuition Robotics, is built specifically for older adults: it proactively starts conversations and checks in across the day rather than waiting for commands. It is a tabletop unit sold with an ongoing service subscription rather than a one-off gadget."),
+        ("Are these robots safe for children?",
+         "Moxie is designed for children and ships with parent controls and a research-backed curriculum. As with any connected device, keep firmware updated and review the companion app's privacy settings. We only list child-focused robots that put parental controls first."),
+    ]
+    faq_html = "<h2>Frequently asked questions</h2><div class='faqs'>"
+    for q, a in FAQ:
+        faq_html += f"<div class='faq'><h4>{html.escape(q)}</h4><p>{html.escape(a)}</p></div>"
+    faq_html += "</div>"
     body = f'''<h2>Best AI Toys & Companion Robots — Buyer's Guide</h2>
 <p>Every pick below is a companion robot we verified in-stock on Amazon today, linked to its exact product page.</p>
-<div class="grid">{rows}</div>'''
-    out = page(None, body,
+<div class="grid">{rows}</div>
+{faq_html}'''
+    out = page(None, body + faq_schema(FAQ),
         title="Best AI Toys & Companion Robots 2026 — Buyer's Guide",
         desc="Autonomous daily buyer's guide to the best AI toys, companion robots and digital companions, with Amazon affiliate links.",
         canonical=f"{SITE_URL}/best.html")
