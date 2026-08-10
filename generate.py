@@ -180,7 +180,7 @@ def page(p, body_html, title, desc, canonical, crumbs=None):
 <meta property="og:title" content="{html.escape(title)}">
 <meta property="og:description" content="{html.escape(desc)}">
 <meta property="og:type" content="article">
-<link rel="stylesheet" href="assets/style.css"></head><body>
+<link rel="stylesheet" href="assets/style.css">{jsonld()}</head><body>
 <header><div class="wrap"><span class="badge">⚡ AUTONOMOUS · {TODAY}</span>
 <h1>🤖 Companion Intelligence</h1><p class="tag">AI toys, robots & digital companions — reviewed daily by a machine that never sleeps.</p></div></header>
 <div class="wrap">{breadcrumbs(crumbs)}<section>{body_html}</section>
@@ -389,8 +389,7 @@ def build_home():
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Companion Intelligence — AI Companion Robot Reviews">
 <meta name="twitter:description" content="Daily autonomous reviews of AI toys and companion robots.">
-{jsonld()}
-<link rel="stylesheet" href="assets/style.css"></head><body>
+<link rel="stylesheet" href="assets/style.css">{jsonld()}</head><body>
 <header><div class="wrap hero">
   <span class="badge">⚡ AUTONOMOUS · UPDATED {TODAY}</span>
   <h1>🤖 Companion Intelligence</h1>
