@@ -191,6 +191,7 @@ def upload_media(path, title):
 def publish_pin(p, board_id, dry_run=False):
     title, desc = build_caption(p)
     slug = p["name"].lower()
+    slug = generate.slugify(p["name"])           # FIX: match real review files (miko-3.html, not miko 3.html)
     link = f"{generate.SITE_URL}/{slug}.html"   # direct, non-cloaked, no target=_blank
     img_path = render_pin(p)
 
