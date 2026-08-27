@@ -132,7 +132,7 @@ def render_pin(p):
     d.text((W // 2, H - 60), "#ad · As an Amazon Associate we earn from qualifying purchases",
            font=_font(20), anchor="mm", fill=(150, 160, 180))
 
-    path = os.path.join(OUTDIR, f"{p['name'].lower()}.png")
+    path = os.path.join(OUTDIR, f"{generate.slugify(p['name'])}.png")
     img.save(path, "PNG")
     return path
 
