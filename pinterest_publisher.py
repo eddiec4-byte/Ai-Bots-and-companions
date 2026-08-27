@@ -129,7 +129,7 @@ def render_pin(p):
            anchor="mm", fill=(255, 255, 255))
 
     # disclosure footer (keeps it compliant even as a standalone image)
-    d.text((W // 2, H - 60), "#ad · As an Amazon Associate we earn from qualifying purchases",
+    d.text((W // 2, H - 60), "#ad | As an Amazon Associate we earn from qualifying purchases",
            font=_font(20), anchor="mm", fill=(150, 160, 180))
 
     path = os.path.join(OUTDIR, f"{generate.slugify(p['name'])}.png")
@@ -139,11 +139,26 @@ def render_pin(p):
 # ---------------------------------------------------------------------------
 # 2. Caption - FTC-compliant
 # ---------------------------------------------------------------------------
+def _ascii(s):
+    """Sanitize text to plain ASCII so the Pinterest bulk CSV importer (strict
+    about non-ASCII / smart punctuation) accepts every row."""
+    repl = {
+        "\u2014": "-", "\u2013": "-", "\u2012": "-", "\u2011": "-",  # dashes
+        "\u2018": "'", "\u2019": "'", "\u201c": '"', "\u201d": '"',  # quotes
+        "\u2022": "|", "\u00b7": "|", "\u2026": "...",               # bullets/middot/ellipsis
+        "\u00a0": " ", "\u2010": "-",
+    }
+    for k, v in repl.items():
+        s = s.replace(k, v)
+    return s.encode("ascii", "ignore").decode("ascii")
+
+
 def build_caption(p):
-    title = f"{p['name']} Review 2026 — honest, autonomous breakdown"
-    body = (f"{p['name']} by {p['maker']}: pros, cons, and where to buy. "
-            f"Machine-curated editorial — no fluff, just the facts. #ad "
-            f"As an Amazon Associate we earn from qualifying purchases.")
+    title = _ascii(f"{p['name']} Review 2026 - honest, autonomous breakdown")
+    body = _ascii(
+        f"{p['name']} by {p['maker']}: pros, cons, and where to buy. "
+        f"Machine-curated editorial - no fluff, just the facts. #ad "
+        f"As an Amazon Associate we earn from qualifying purchases.")
     return title, body
 
 # ---------------------------------------------------------------------------
