@@ -1,19 +1,22 @@
 #!/usr/bin/env python3
-"""Emit a Pinterest bulk-upload CSV + publish pin images to the site.
+"""Emit a Pinterest bulk-upload CSV using the EXACT schema Pinterest's bulk
+editor expects (verified against Pinterest's column spec):
+
+  Title          (required, <=100 chars)
+  Media URL      (required, must be @url:<public png/jpeg/mp4>)
+  Pinterest board(required, board title; created if missing)
+  Description    (<=500 chars)
+  Link
+  Publish date   (optional -> publish immediately if blank)
+  Keywords       (optional, comma-separated)
 
 Until the Pinterest app is upgraded to STANDARD access, the daily auto-pin cron
-cannot post publicly. This script produces a CSV you can upload manually at
-business.pinterest.com -> Ads -> Bulk editor -> Create, choosing the board
-"ai.pets.and.companions". Pinterest requires an IMAGE URL (not a local file),
-so pin images are rendered to pins/ and that folder is committed/deployed to
-GitHub Pages, giving each image a public URL.
-
-Reuses pinterest_publisher.build_caption / render_pin so the CSV matches exactly
-what the auto-pinner would post (same title, description, link, FTC disclosure).
+cannot post publicly, so this CSV lets you bulk-upload manually. Pin images are
+rendered to pins/ and deployed to GitHub Pages (public URLs). Reuses
+pinterest_publisher.build_caption / render_pin so copy matches the auto-pinner.
 """
 import os
 import csv
-import json
 import generate
 import pinterest_publisher as pp
 
@@ -21,15 +24,15 @@ SITE = generate.SITE
 OUTDIR = pp.OUTDIR
 os.makedirs(OUTDIR, exist_ok=True)
 
-# Pinterest bulk-create CSV columns (minimal, required subset). Header names
-# are what the bulk editor expects; extra columns are ignored.
+# Exact Pinterest bulk-editor columns (order matters to the importer).
 CSV_COLS = [
-    "Image URL",
-    "Board",
     "Title",
+    "Media URL",
+    "Pinterest board",
     "Description",
     "Link",
-    "Alt Text",
+    "Publish date",
+    "Keywords",
 ]
 
 board = generate.AFF.get("pinterest_board", "ai.pets.and.companions")
@@ -42,13 +45,15 @@ for p in generate.PRODUCTS:
     slug = generate.slugify(p["name"])
     img_url = f"{generate.SITE_URL}/pins/{slug}.png"
     link = f"{generate.SITE_URL}/{slug}.html"
+    # Pinterest requires @url: wrapper and a public link.
     rows.append({
-        "Image URL": img_url,
-        "Board": board,
-        "Title": title,
-        "Description": desc,
+        "Title": title[:100],
+        "Media URL": f"@url:{img_url}",
+        "Pinterest board": board,
+        "Description": desc[:500],
         "Link": link,
-        "Alt Text": f"{p['name']} companion robot review",
+        "Publish date": "",            # publish immediately
+        "Keywords": f"{p['name']}, {p['maker']}, AI companion, robot pet, review",
     })
 
 with open(csv_path, "w", newline="", encoding="utf-8") as f:
@@ -57,7 +62,6 @@ with open(csv_path, "w", newline="", encoding="utf-8") as f:
     w.writerows(rows)
 
 print(f"Wrote {len(rows)} pins to {csv_path}")
-print(f"Board: {board}  |  site: {generate.SITE_URL}")
-print("Pin images rendered to pins/*.png (deploy via git to make URLs live).")
+print(f"Board (will be created if missing): {board}")
 for r in rows:
-    print(f"  {r['Title']}\n    img: {r['Image URL']}\n    link: {r['Link']}")
+    print(f"  {r['Title']}  | media: {r['Media URL']}")
