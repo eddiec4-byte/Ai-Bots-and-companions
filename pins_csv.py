@@ -6,7 +6,7 @@ editor expects (verified against Pinterest's column spec):
   Media URL      (required, must be @url:<public png/jpeg/mp4>)
   Pinterest board(required, board title; created if missing)
   Description    (<=500 chars)
-  Link
+  Link           (must also be @url:<destination>; bare URLs throw "Video link... isn't formatted properly")
   Publish date   (optional -> publish immediately if blank)
   Keywords       (optional, comma-separated)
 
@@ -45,13 +45,14 @@ for p in generate.PRODUCTS:
     slug = generate.slugify(p["name"])
     img_url = f"{generate.SITE_URL}/pins/{slug}.png"
     link = f"{generate.SITE_URL}/{slug}.html"
-    # Pinterest requires @url: wrapper and a public link.
+    # Pinterest requires @url: wrapper on BOTH Media URL and Link.
+    # A bare Link URL triggers "Video link in URL column isn't formatted properly".
     rows.append({
         "Title": title[:100],
         "Media URL": f"@url:{img_url}",
         "Pinterest board": board,
         "Description": desc[:500],
-        "Link": link,
+        "Link": f"@url:{link}",
         "Publish date": "",            # publish immediately
         "Keywords": f"{p['name']}, {p['maker']}, AI companion, robot pet, review",
     })
