@@ -1,8 +1,10 @@
 {
   "date": "2026-08-27",
   "checked": 13,
-  "live": 13,
-  "drop_candidates": [],
+  "live": 12,
+  "drop_candidates": [
+    "EmoCompanion"
+  ],
   "products": [
     {
       "name": "Eilik",
@@ -30,7 +32,7 @@
       "host": "amazon.com",
       "status": 200,
       "unavailable": false,
-      "title": "EMOPET AI Desk Robot Companion - ChatGPT Enabled with Voice Commands &amp; Dancing, Interactive AI Robot Pet with Personality, for Adults and Kids",
+      "title": null,
       "note": "",
       "verdict": "LIVE"
     },
@@ -59,10 +61,10 @@
       "asin": "B0H267X7VR",
       "host": "amazon.com",
       "status": 200,
-      "unavailable": false,
-      "title": null,
+      "unavailable": true,
+      "title": "Emotional Robot for Companion AI Robot for Companion with Voice Commands Singing Dance Chatbot for All Ages (Black)",
       "note": "",
-      "verdict": "LIVE"
+      "verdict": "UNAVAILABLE"
     },
     {
       "name": "AnnadueBot",
@@ -127,10 +129,10 @@
     {
       "name": "VBESTLIFE Bot",
       "asin": "B0H7T572N2",
-      "host": "amazon.nl",
+      "host": "amazon.com",
       "status": 200,
       "unavailable": false,
-      "title": "VBESTLIFE AI Desktop Robot Companion, 1,28 Inch Scherm Smart Talking Robot met Voice Wake Up, Bluetooth 5.0, WiFi Weerklok Video Muziek Afspelen",
+      "title": null,
       "note": "",
       "verdict": "LIVE"
     }
