@@ -67,6 +67,11 @@ csv_path = os.path.join(SITE, "pins", "pinterest_bulk_upload.csv")
 
 rows = []
 for p in generate.PRODUCTS:
+    # Only pin products with a VERIFIED, in-stock Amazon ASIN. Products whose
+    # ASIN was removed from affiliate.json (dead / not-listed) are not featured,
+    # per the affiliate policy — pinning them would send buyers to a 404.
+    if p["name"] not in generate.AMAZON_ASIN:
+        continue
     title, desc = pp.build_caption(p)
     img_path = pp.render_pin(p)  # renders pins/<slug>.png
     slug = generate.slugify(p["name"])

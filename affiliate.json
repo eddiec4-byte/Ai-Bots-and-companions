@@ -21,37 +21,25 @@
     "Eilik": "B09XGQMSMB",
     "Aibi": "B0F1TH7D65",
     "EmoPet": "B0DDT2MT9K",
-    "Miko 3": "B09QHP6SMC",
-    "ConvoBot": "B0GY8W5L6G",
     "EmoCompanion": "B0H267X7VR",
-    "AnnadueBot": "B0HBCMFDXY",
-    "AIBot X1": "B0H2Z1JBG3",
     "ZNP Translator": "B0GZNM6NVD",
     "Plantagotchi": "B0FZ57DPBJ",
-    "JiawuBot": "B0H8SGQTWM",
-    "umissfunBot": "B0GH2G2PKQ",
-    "VBESTLIFE Bot": "B0H7T572N2"
+    "umissfunBot": "B0GH2G2PKQ"
   },
   "asin_verified": {
     "Eilik": "Energize Lab Eilik - desktop companion (IN STOCK, checked 2026-08-06)",
     "Aibi": "Aibi Pocket Pet - Living.AI wearable robot (IN STOCK, checked 2026-08-06)",
     "EmoPet": "EMOPET AI Desk Robot Companion - Living.AI (IN STOCK, checked 2026-08-06)",
-    "Miko 3": "Miko 3 educational companion robot (IN STOCK, verified 2026-08-27)",
-    "ConvoBot": "Bluetooth conversation/language robot (IN STOCK, verified 2026-08-27)",
     "EmoCompanion": "Emotional companion robot voice/sing/dance (IN STOCK, verified 2026-08-27)",
-    "AnnadueBot": "Annadue AI companion robot (IN STOCK, verified 2026-08-27)",
-    "AIBot X1": "AI companion robot (IN STOCK, verified 2026-08-27)",
     "ZNP Translator": "ZNP touchscreen translation companion (IN STOCK, verified 2026-08-27)",
     "Plantagotchi": "Intelligent planter / Plantagotchi (IN STOCK, verified 2026-08-27)",
-    "JiawuBot": "Jiawu AI companion robot (IN STOCK, verified 2026-08-27)",
-    "umissfunBot": "umissfun AI companion robot (IN STOCK, verified 2026-08-27)",
-    "VBESTLIFE Bot": "VBESTLIFE AI companion robot (IN STOCK, verified 2026-08-27)"
+    "umissfunBot": "umissfun AI companion robot (IN STOCK, verified 2026-08-27)"
   },
   "link_check": {
     "date": "2026-08-27",
-    "method": "Amazon US dp/ASIN title + 'Currently unavailable' scrape",
+    "method": "Amazon US dp/ASIN title + 'Currently unavailable' scrape (real browser)",
     "policy": "Featured catalog contains ONLY products with a verified, in-stock Amazon ASIN. Every primary buy link is an exact dp/ASIN (locale-safe). Products without a verified in-stock ASIN are NOT featured.",
-    "removed_unavailable_or_not_listed": ["Ropet (no ASIN / parked domain)", "Moflin (no ASIN)", "Lovot (no ASIN)", "Loona (no in-stock ASIN; B0C2C9LJNQ is an Eilik alias)", "ElliQ (no ASIN)", "Aibo (no ASIN)", "Vector (B0FV3M8GWW UNAVAILABLE)", "LOOI (B0F1YWF96K UNAVAILABLE)", "Jennie (no ASIN)", "Moxie (B07984JN3L dead/blocked link, removed 2026-08-27)"]
+    "removed_unavailable_or_not_listed": ["Ropet (no ASIN / parked domain)", "Moflin (no ASIN)", "Lovot (no ASIN)", "Loona (no in-stock ASIN; B0C2C9LJNQ is an Eilik alias)", "ElliQ (no ASIN)", "Aibo (no ASIN)", "Vector (B0FV3M8GWW UNAVAILABLE)", "LOOI (B0F1YWF96K UNAVAILABLE)", "Jennie (no ASIN)", "Moxie (B07984JN3L dead/blocked link, removed 2026-08-27)", "Miko 3 (B09QHP6SMC DEAD - Page Not Found, removed 2026-08-27)", "ConvoBot (B0GY8W5L6G DEAD - Page Not Found, removed 2026-08-27)", "AnnadueBot (B0HBCMFDXY DEAD - Page Not Found, removed 2026-08-27)", "AIBot X1 (B0H2Z1JBG3 DEAD - Page Not Found, removed 2026-08-27)", "JiawuBot (B0H8SGQTWM DEAD - Page Not Found, removed 2026-08-27)", "VBESTLIFE Bot (B0H7T572N2 DEAD - Page Not Found, removed 2026-08-27)"]
   },
   "notes": "IMPORTANT: only list products here that are VERIFIED in-stock on Amazon. amazon_asin keys MUST match product names in generate.py PRODUCTS. Never guess ASINs. Vector/LOOI were removed because they were 'Currently unavailable'. Loona's apparent ASIN B0C2C9LJNQ actually resolves to Eilik (alias) so Loona has no real listing."
 }
