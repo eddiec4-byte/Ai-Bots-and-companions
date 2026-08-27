@@ -505,7 +505,7 @@ def build_longtail(t):
         '<h2>' + html.escape(t["title"]) + '</h2>'
         '<p>' + html.escape(t["intro"]) + '</p>'
         '<div class="grid">' + cards + '</div>'
-        '<p><a class="buy" href="' + html.escape(product_link(next((x for x in PRODUCTS if x["name"] == t["prods"][0]), {"name":t["slug"],"kw":t["kw"]}))) + '" rel="noopener">Browse all options ↗</a> <a class="link" href="' + html.escape(amz(t["kw"])) + '" rel="noopener">Search Amazon</a></p>'
+        '<p><a class="buy" href="' + html.escape(amz(t["kw"])) + '" rel="noopener">Browse all options ↗</a> <a class="link" href="' + html.escape(amz(t["kw"])) + '" rel="noopener">Search Amazon</a></p>'
         + faq_html)
     schema = faq_schema(faqs)
     body2 = body + ("\n" + schema if schema else "")
