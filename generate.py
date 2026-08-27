@@ -31,6 +31,14 @@ def amz(query):
 # land on the wrong item. Defined in affiliate.json -> amazon_asin.
 AMAZON_ASIN = ASIN
 
+import re as _re
+
+def slugify(name):
+    """Turn a product name into a safe static-page slug (no spaces, lowercase)."""
+    s = name.lower().strip()
+    s = _re.sub(r"[^a-z0-9]+", "-", s)
+    return s.strip("-")
+
 def product_link(p):
     """PRIMARY buy link — ALWAYS Amazon (to earn the Associate commission).
     If a VERIFIED exact product ASIN exists, use the dp/ASIN page (lands on the
@@ -254,7 +262,7 @@ PRODUCTS = [
 
 def product_card(p):
     url = product_link(p)
-    slug = p["name"].lower()
+    slug = slugify(p["name"])
     return f'''<div class="card">
   <div class="product-img"><span class="mono">{html.escape(p['name'][0].upper())}</span></div>
   <div class="stars" aria-label="Rated 4.6 out of 5">★★★★★ <span style="color:var(--muted);font-size:12px">4.6 · {html.escape(p['maker'])}</span></div>
@@ -321,7 +329,7 @@ def related_links(p, limit=3):
     others = [x for x in PRODUCTS if x["name"] != p["name"]][:limit]
     if not others: return ""
     items = "".join(
-        f'<li><a class="link" href="{x["name"].lower()}.html">{html.escape(x["name"])} review</a>'
+        f'<li><a class="link" href="{slugify(x["name"])}.html">{html.escape(x["name"])} review</a>'
         f' — {html.escape(x.get("maker",""))}</li>' for x in others)
     return f'<h3>Related companions</h3><ul>{items}</ul>'
 
@@ -350,7 +358,7 @@ def page(p, body_html, title, desc, canonical, crumbs=None):
 def build_review(p):
     pros = "".join(f"<li>{html.escape(x)}</li>" for x in p.get("pros", []))
     cons = "".join(f"<li>{html.escape(x)}</li>" for x in p.get("cons", []))
-    slug = p["name"].lower()
+    slug = slugify(p["name"])
     body = f'''<div class="product-img product-img-lg"><span class="mono mono-lg">{html.escape(p['name'][0].upper())}</span></div>
 <h2>{html.escape(p['name'])} — Review</h2>
 <p>{html.escape(p['blurb'])} Made by <strong>{html.escape(p['maker'])}</strong>.</p>
@@ -360,7 +368,7 @@ def build_review(p):
 <h3>Cons</h3><ul>{cons}</ul>
 <p><a class="buy" href="{html.escape(product_link(p))}" rel="noopener">Check {html.escape(p['name'])} price ↗</a> <a class="link" href="{html.escape(amazon_search_link(p))}" rel="noopener">Search Amazon</a></p>
 <p class="disclaimer">Find it on Amazon: <a class="link" href="{html.escape(product_link(p))}" rel="noopener">amazon.com/dp or search for {html.escape(p['name'])}</a></p>''' + related_links(p)
-    slug = p["name"].lower()
+    slug = slugify(p["name"])
     out = page(p, body,
         title=f"{p['name']} Review 2026 — Companion Intelligence",
         desc=f"Autonomous review of the {p['name']} by {p['maker']}: pros, cons, and where to buy.",
@@ -410,7 +418,7 @@ def build_best_of():
 def build_sitemap():
     urls = [SITE_URL + "/", SITE_URL + "/best.html", SITE_URL + "/privacy.html"]
     for p in PRODUCTS:
-        urls.append(f"{SITE_URL}/{p['name'].lower()}.html")
+        urls.append(f"{SITE_URL}/{slugify(p['name'])}.html")
     for c in COMPARES:
         urls.append(f"{SITE_URL}/{c['slug']}.html")
     for t in LONGTAIL:
