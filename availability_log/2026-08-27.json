@@ -1,0 +1,138 @@
+{
+  "date": "2026-08-27",
+  "checked": 13,
+  "live": 13,
+  "drop_candidates": [],
+  "products": [
+    {
+      "name": "Eilik",
+      "asin": "B09XGQMSMB",
+      "host": "amazon.com",
+      "status": 200,
+      "unavailable": false,
+      "title": null,
+      "note": "",
+      "verdict": "LIVE"
+    },
+    {
+      "name": "Aibi",
+      "asin": "B0F1TH7D65",
+      "host": "amazon.com",
+      "status": 200,
+      "unavailable": false,
+      "title": null,
+      "note": "",
+      "verdict": "LIVE"
+    },
+    {
+      "name": "EmoPet",
+      "asin": "B0DDT2MT9K",
+      "host": "amazon.com",
+      "status": 200,
+      "unavailable": false,
+      "title": "EMOPET AI Desk Robot Companion - ChatGPT Enabled with Voice Commands &amp; Dancing, Interactive AI Robot Pet with Personality, for Adults and Kids",
+      "note": "",
+      "verdict": "LIVE"
+    },
+    {
+      "name": "Miko 3",
+      "asin": "B09QHP6SMC",
+      "host": "amazon.com",
+      "status": 200,
+      "unavailable": false,
+      "title": null,
+      "note": "",
+      "verdict": "LIVE"
+    },
+    {
+      "name": "ConvoBot",
+      "asin": "B0GY8W5L6G",
+      "host": "amazon.com",
+      "status": 200,
+      "unavailable": false,
+      "title": null,
+      "note": "",
+      "verdict": "LIVE"
+    },
+    {
+      "name": "EmoCompanion",
+      "asin": "B0H267X7VR",
+      "host": "amazon.com",
+      "status": 200,
+      "unavailable": false,
+      "title": null,
+      "note": "",
+      "verdict": "LIVE"
+    },
+    {
+      "name": "AnnadueBot",
+      "asin": "B0HBCMFDXY",
+      "host": "amazon.com",
+      "status": 200,
+      "unavailable": false,
+      "title": null,
+      "note": "",
+      "verdict": "LIVE"
+    },
+    {
+      "name": "AIBot X1",
+      "asin": "B0H2Z1JBG3",
+      "host": "amazon.com",
+      "status": 200,
+      "unavailable": false,
+      "title": null,
+      "note": "",
+      "verdict": "LIVE"
+    },
+    {
+      "name": "ZNP Translator",
+      "asin": "B0GZNM6NVD",
+      "host": "amazon.com",
+      "status": 200,
+      "unavailable": false,
+      "title": null,
+      "note": "",
+      "verdict": "LIVE"
+    },
+    {
+      "name": "Plantagotchi",
+      "asin": "B0FZ57DPBJ",
+      "host": "amazon.com",
+      "status": 200,
+      "unavailable": false,
+      "title": null,
+      "note": "",
+      "verdict": "LIVE"
+    },
+    {
+      "name": "JiawuBot",
+      "asin": "B0H8SGQTWM",
+      "host": "amazon.com",
+      "status": 200,
+      "unavailable": false,
+      "title": null,
+      "note": "",
+      "verdict": "LIVE"
+    },
+    {
+      "name": "umissfunBot",
+      "asin": "B0GH2G2PKQ",
+      "host": "amazon.com",
+      "status": 200,
+      "unavailable": false,
+      "title": null,
+      "note": "",
+      "verdict": "LIVE"
+    },
+    {
+      "name": "VBESTLIFE Bot",
+      "asin": "B0H7T572N2",
+      "host": "amazon.nl",
+      "status": 200,
+      "unavailable": false,
+      "title": "VBESTLIFE AI Desktop Robot Companion, 1,28 Inch Scherm Smart Talking Robot met Voice Wake Up, Bluetooth 5.0, WiFi Weerklok Video Muziek Afspelen",
+      "note": "",
+      "verdict": "LIVE"
+    }
+  ]
+}
