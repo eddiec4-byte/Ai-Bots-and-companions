@@ -1,10 +1,8 @@
 {
   "date": "2026-08-27",
   "checked": 13,
-  "live": 12,
-  "drop_candidates": [
-    "EmoCompanion"
-  ],
+  "live": 13,
+  "drop_candidates": [],
   "products": [
     {
       "name": "Eilik",
@@ -49,10 +47,10 @@
     {
       "name": "ConvoBot",
       "asin": "B0GY8W5L6G",
-      "host": "amazon.com",
+      "host": "amazon.nl",
       "status": 200,
       "unavailable": false,
-      "title": null,
+      "title": "AI Smart Tutor Robot with 4 Key AI Models and Natural Conversation, Story in 37 Languages, Music, Weather, Bluetooth Speaker, Interactive Eye Lights, Home Learning Guide",
       "note": "",
       "verdict": "LIVE"
     },
@@ -61,10 +59,10 @@
       "asin": "B0H267X7VR",
       "host": "amazon.com",
       "status": 200,
-      "unavailable": true,
-      "title": "Emotional Robot for Companion AI Robot for Companion with Voice Commands Singing Dance Chatbot for All Ages (Black)",
+      "unavailable": false,
+      "title": null,
       "note": "",
-      "verdict": "UNAVAILABLE"
+      "verdict": "LIVE"
     },
     {
       "name": "AnnadueBot",
