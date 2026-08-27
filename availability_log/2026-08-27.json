@@ -47,10 +47,10 @@
     {
       "name": "ConvoBot",
       "asin": "B0GY8W5L6G",
-      "host": "amazon.nl",
+      "host": "amazon.com",
       "status": 200,
       "unavailable": false,
-      "title": "AI Smart Tutor Robot with 4 Key AI Models and Natural Conversation, Story in 37 Languages, Music, Weather, Bluetooth Speaker, Interactive Eye Lights, Home Learning Guide",
+      "title": null,
       "note": "",
       "verdict": "LIVE"
     },
