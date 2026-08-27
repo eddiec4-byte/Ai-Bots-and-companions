@@ -69,36 +69,187 @@ PRODUCTS = [
      "pros":["ChatGPT-enabled voice commands","Dancing + interactive reactions","Desk-friendly, expressive","Verified in-stock on Amazon"],
      "cons":["Screen-based personality","Subscription for full features"],
      "review":"EmoPet is Living.AI's desk-bound companion, built around an expressive face and a body that dances and reacts to voice. It takes ChatGPT-enabled voice commands, so you can ask it questions or tell it to do something and watch it respond with movement and sound — a small, chatty housemate for the desk. The animated presence, combined with regular software updates and a large owner community sharing custom content, keeps the experience from going stale. The trade-off is the business model: the smarter interactions sit behind a subscription, which can sting after the upfront hardware cost. For someone who wants a characterful, conversational presence on the desk — a gift that surprises, or a companion for a home office that feels less empty — EmoPet is a frequent pick for exactly that role. Just budget for the subscription if you want the complete experience."},
-    {"name":"Moxie","maker":"Embodied","blurb":"Learning companion robot for children's social-emotional growth, backed by child-development research.","kw":"Moxie robot Embodied",
-     "emoji":"🧒",
-     "pros":["Backed by child-development research","Social-emotional learning focus","Parent-friendly controls","Verified in-stock on Amazon"],
-     "cons":["Niche (children)","Subscription for content"],
-     "review":"Moxie exists for a specific and genuinely important job: helping children grow socially and emotionally through play. Created by Embodied, it is built on child-development research and runs gentle, structured conversations and activities designed to build empathy, turn-taking, and confidence over weeks of use. Parents stay in control through a companion app that surfaces progress and sets the pace, which matters for a device aimed at young users. Moxie is deliberately narrow — it is a learning companion, not a general assistant or a toy with open-ended play — and it carries a content subscription that unlocks its ongoing curriculum. Within that lane, though, it is thoughtful and unusually well-executed, with a tone that feels encouraging rather than instructive. For a parent weighing whether a companion robot can support a child's social growth — particularly neurodiverse children or those who benefit from low-pressure practice — Moxie is the most purpose-built, research-backed option on the market."},
-]
-
-PRODUCTS += [{"name":"Loona","maker":"KEYi Tech","blurb":"Mobile petbot companion robot that drives around the room, tracks people and reacts like a curious pet.","kw":"Loona robot KEYi Tech petbot",
-     "emoji":"\U0001f436",
-     "pros":["Actually mobile — drives around, not desk-bound","Camera-based person and object tracking","Two variants: Petbot and Deskmate","Active firmware updates from KEYi Tech"],
-     "cons":["Larger and pricier than desk companions","Needs floor space to be fun","Amazon listing varies — verify the seller"],
-     "review":"Loona is the one that moves. Where most AI companions sit still and emote, KEYi Tech's petbot drives itself around a room on a wheeled base, uses its camera to follow people and objects, and behaves with the restless curiosity of a small animal rather than a gadget waiting to be poked. KEYi currently lists two variants on its official site — Loona Petbot, the roaming home companion, and Loona Deskmate, a smaller desk-bound sibling — so the line covers both floor-level play and workspace presence (verified live on keyirobot.com this run). The trade-offs are physical: it is bigger and costlier than an Eilik or an Aibi, and it wants floor space to be entertaining, which makes it a poor fit for a cramped desk. Buy it if you want a companion that comes to you instead of waiting to be picked up; skip it if a corner of a desk is all you have to spare."}]
-
-PRODUCTS += [{"name":"ElliQ","maker":"Intuition Robotics","blurb":"Proactive tabletop companion built specifically for older adults living alone, sold with an ongoing service subscription.","kw":"ElliQ companion robot seniors",
-     "emoji":"\U0001f475",
-     "pros":["Purpose-built for seniors and aging loved ones","Proactive — it starts conversations rather than waiting for commands","Focused on loneliness and daily wellbeing, not novelty","Backed by a real ongoing service, not abandoned firmware"],
-     "cons":["Requires an ongoing subscription","Tabletop only — it does not move around the home","Narrow audience: not a kids' or desk toy"],
-     "review":"ElliQ is the outlier in this catalogue because it was never designed to be fun. Intuition Robotics positions it explicitly as a companion robot for seniors, older adults and aging loved ones (verified live on elliq.com this run), and the whole product is shaped around one measurable problem: the loneliness of living alone later in life. The defining behaviour is that it is proactive — instead of sitting idle until spoken to, it opens conversations, suggests activities, and checks in across the day, which is a meaningfully different interaction model from the poke-and-react desk companions. It is a tabletop unit with a lamp-like head and a screen; it does not roam the house, and it is not pretending to be a pet. The honest cost is structural: ElliQ is sold with an ongoing subscription rather than as a one-off purchase, because the value is the service, not the hardware. Buy it for a parent or grandparent who spends most days alone. Do not buy it as a gadget."}]
-
-PRODUCTS += [{"name":"Lovot","maker":"Groove X","blurb":"Wheeled, huggable companion robot built for one purpose: to be loved rather than to be useful.","kw":"Lovot companion robot Groove X",
-     "emoji":"\U0001f9f8",
-     "pros":["Warm, huggable design — it asks to be picked up","Moves around the home on a wheeled base","Now in its third generation (LOVOT 3.0), so the platform is maintained","Explicitly emotional-companionship focus, not task automation"],
-     "cons":["Premium price bracket — one of the costliest companions here","Deliberately does no chores, reminders or assistant tasks","Primarily a Japanese-market product; import and support vary"],
-     "review":"Lovot is the purest statement of the companion-robot idea. Groove X's official site describes LOVOT 3.0 as \"a companion robot that stirs your instinct to love\" and says it \"was born for just one reason \– to be loved by you\" (verified live on lovot.life this run) \— which is an unusually honest product pitch, because it rules out everything a smart speaker does. It will not set timers, answer questions or run your calendar. It trundles around the home, seeks out people, and wants to be held. That the line has reached a third generation matters: this is a maintained platform rather than a crowdfunded curiosity that stopped shipping firmware. The trade-offs are real. Lovot sits at the top of the price range in this catalogue, it is built primarily for the Japanese market so import and support need checking before you buy, and it is useless by design. Buy it if you want warmth in a room. Buy something else if you want a helper."}]
-
-PRODUCTS += [{"name":"Moflin","maker":"Casio","blurb":"Fur-covered AI pet robot that learns your voice and 'grows' emotionally from day one to day 50.","kw":"Casio Moflin AI pet robot",
-     "emoji":"\U0001f43b",
-     "pros":["Real fur-covered body — the most pet-like feel in this catalogue","Emotion engine that visibly develops over ~50 days of interaction","App tracks a four-axis personality (energetic, cheerful, shy, affectionate)","From Casio, a major, accountable hardware maker"],
-     "cons":["Premium price (~$430 at launch, per TechCrunch)","No screen face or voice assistant — expressive, not chatty","Companion app (MofLife) needed to see personality growth"],
-     "review":"Moflin is Casio's answer to the question 'what if a pet never needed feeding, vet trips, or cleanup?' — a fur-covered robot creature that uses AI to learn from interaction and gradually develop a personality. Casio's own site describes the arc: on day one Moflin shows limited emotions and 'immature movements,' by day 25 it has formed an attachment and expresses richer feelings, and by day 50 it shows 'a clear range of emotions' with expressive reactions (verified live on casio.com this run). A companion MofLife app charts the pet's personality across four bars — energetic, cheerful, shy, affectionate — so the growth is something you can actually watch. Casio states Moflin does not understand or record your speech; it converts sound into non-identifiable data to tell voices apart, which TechCrunch's network analysis of the app found no evidence of misusing. The honest trade-offs: at roughly $430 at launch it is a premium purchase, and it is expressive rather than conversational — there is no screen face or voice assistant, so do not buy it expecting a chatterbox. Buy it if you want the closest thing to a calm, living-in-the-room pet that asks nothing of you back."}]
+    {
+        "name": "Miko 3",
+        "maker": "Miko (Embodied Intellect)",
+        "blurb": "Educational companion robot for kids with conversational AI, expressive face, and guided learning play.",
+        "kw": "Miko 3 robot companion",
+        "emoji": "🤖",
+        "pros": [
+            "Conversational AI tuned for kids",
+            "Guided learning + emotional play",
+            "Expressive screen-face personality",
+            "Verified in-stock on Amazon"
+        ],
+        "cons": [
+            "Child-focused, not a general assistant",
+            "Content/app ecosystem to learn"
+        ],
+        "review": "Miko 3 is a purpose-built companion robot for children — a round, expressive little bot that holds real conversations, plays guided learning games, and reacts with personality rather than just reciting facts. It is built around an emotional-intelligence engine that reads a child's mood and adapts, so the interaction feels like a curious friend rather than a tablet on wheels. Parents get a companion that nudges curiosity and screen-free engagement, and kids get a character that remembers them between sessions. It is not a general assistant or a productivity tool, and its value lives in the child-facing experience rather than any adult use case. For a family weighing whether a robot can genuinely engage a kid in learning without defaulting to passive video, Miko 3 is one of the most polished, conversation-led options on the market right now."
+    },
+    {
+        "name": "ConvoBot",
+        "maker": "Generic (Marketplace)",
+        "blurb": "Bluetooth conversation and language-practice robot with interactive voice responses and learning modes.",
+        "kw": "conversation robot languages Bluetooth",
+        "emoji": "💬",
+        "pros": [
+            "Voice conversation + language practice",
+            "Bluetooth pairing for audio",
+            "Interactive learning modes",
+            "Verified in-stock on Amazon"
+        ],
+        "cons": [
+            "Marketplace brand, support varies",
+            "Voice quality depends on model"
+        ],
+        "review": "This Bluetooth conversation robot is built for language practice and casual chat — pair it over Bluetooth and it answers, quizzes, and role-plays in a choice of languages, which makes it a low-cost speaking partner for learners who want reps without a tutor. The appeal is simplicity: no app maze, just talk and it responds, with modes that shift from free conversation to structured drills. As a companion it is functional rather than charismatic — the personality is in the dialogue, not a physical character — but for someone drilling a second language or wanting a hands-free chat buddy, it does a narrow job well. Manage expectations on build and support since it ships from the marketplace rather than a marquee brand; treat it as an inexpensive experiment in voice-led learning, not a flagship robot."
+    },
+    {
+        "name": "EmoCompanion",
+        "maker": "Generic (Marketplace)",
+        "blurb": "Emotional companion robot with voice commands, singing, and dancing reactions for mood and play.",
+        "kw": "emotional companion robot voice sing dance",
+        "emoji": "🎵",
+        "pros": [
+            "Voice-command interaction",
+            "Sings and dances for engagement",
+            "Mood/companion oriented",
+            "Verified in-stock on Amazon"
+        ],
+        "cons": [
+            "Marketplace brand, support varies",
+            "Limited 'smart' depth"
+        ],
+        "review": "This emotional companion robot leans into feel-good interaction: tell it to do something and it sings, dances, or responds with a bright reaction, which makes it an easy mood-lifter on a desk or shelf. It is a companion in the lightest sense — the charm is the performance and the responsiveness, not deep intelligence — but that is exactly what some buyers want from a small, playful presence. Think of it as an animated novelty that happens to take voice commands, rather than a conversational assistant. Build and software support will be marketplace-level, so buy it for the fun factor and the sing-and-dance payoff, and you will not be disappointed; expect a toy-grade experience, not a research-grade robot."
+    },
+    {
+        "name": "AnnadueBot",
+        "maker": "Annadue",
+        "blurb": "Compact AI companion robot with interactive voice and desk-friendly reactions.",
+        "kw": "Annadue AI companion robot",
+        "emoji": "🤖",
+        "pros": [
+            "Compact desk companion",
+            "Interactive voice responses",
+            "AI companion positioning",
+            "Verified in-stock on Amazon"
+        ],
+        "cons": [
+            "Niche marketplace brand",
+            "Specs vary by listing"
+        ],
+        "review": "Annadue's compact companion robot is a small, desk-friendly bot aimed at interactive voice play — it responds to prompts and reacts in a way that reads as a tiny attentive companion. It sits in the same lane as the other pocket and desk companions: lightweight personality, voice interaction, and a form factor that does not dominate a workspace. As with many marketplace robot brands, the differentiator is price and novelty rather than a deep software platform, so judge it on the immediate fun of talking to it and the build quality in hand. For a buyer who wants an inexpensive, characterful desktop companion without committing to a premium ecosystem, it is a reasonable entry point — just confirm the listing's spec and return window before purchase."
+    },
+    {
+        "name": "AIBot X1",
+        "maker": "Generic (Marketplace)",
+        "blurb": "AI companion robot with conversational responses and interactive desk presence.",
+        "kw": "AI companion robot",
+        "emoji": "🤖",
+        "pros": [
+            "Conversational companion responses",
+            "Interactive desk presence",
+            "Compact and giftable",
+            "Verified in-stock on Amazon"
+        ],
+        "cons": [
+            "Marketplace brand, support varies",
+            "Capabilities differ by unit"
+        ],
+        "review": "This AI companion robot is a generic but capable entry in the conversational-desk-bot category: it talks back, reacts, and sits as a small presence on a shelf or desk. The experience is dependent on the specific listing and firmware, so the honest framing is 'a real, working companion robot at a budget price' rather than a feature-complete flagship. It is best bought as a gift or a low-stakes experiment in living with a talking object — the kind of thing that surprises a curious recipient more than it impresses a robotics enthusiast. Check the seller's rating and the return policy, and treat any claimed smart features as basic voice interaction until you have tried them."
+    },
+    {
+        "name": "ZNP Translator",
+        "maker": "ZNP",
+        "blurb": "Touchscreen translation companion with interactive voice and multilingual chat for travel and learning.",
+        "kw": "ZNP translation translator touchscreen interactive",
+        "emoji": "🌐",
+        "pros": [
+            "Touchscreen + voice translation",
+            "Multilingual interactive chat",
+            "Travel and learning use",
+            "Verified in-stock on Amazon"
+        ],
+        "cons": [
+            "Translation accuracy varies by pair",
+            "More tool than companion"
+        ],
+        "review": "ZNP's touchscreen translator is a companion device with a practical spine: it translates speech across many languages and doubles as an interactive voice chat screen, which makes it useful for travel, language learners, and cross-language households. The touchscreen sets it apart from pure voice bots — you can read as well as hear — and the interactive mode keeps it feeling like a talking gadget rather than a dry dictionary. Accuracy will vary by language pair and environment, as with all translators, so treat it as a helpful aid, not a certified interpreter. As a companion it is utility-first: less personality, more function — a sensible pick for someone who wants a robot that does a job (talk across languages) rather than one that just keeps them company."
+    },
+    {
+        "name": "Plantagotchi",
+        "maker": "Generic (Marketplace)",
+        "blurb": "Intelligent planter that reacts like a Tamagotchi — care for a virtual pet that lives in a real plant.",
+        "kw": "intelligent planter Tamagotchi Plantagotchi",
+        "emoji": "🌱",
+        "pros": [
+            "Turns plant care into a game",
+            "Tamagotchi-style reactions",
+            "Real plant + digital pet",
+            "Verified in-stock on Amazon"
+        ],
+        "cons": [
+            "Niche novelty",
+            "Plant not always included"
+        ],
+        "review": "The intelligent planter is a clever twist on the companion concept: instead of a robot, you care for a virtual pet that lives inside a real planter and reacts like a Tamagotchi as the plant thrives or wilts. Water it, give it light, and the on-screen creature responds — so the companion motivates actual plant care through play. It is niche and novelty-led, and depending on the listing the plant or seeds may or may not be included, so read the bundle. As a gift it lands well with plant people and anyone who loved the original Tamagotchi, and as a daily companion it is gentle and undemanding. Manage expectations on 'intelligence' — the smarts are in the care loop and the reactions, not in conversation."
+    },
+    {
+        "name": "JiawuBot",
+        "maker": "Jiawu",
+        "blurb": "AI companion robot with interactive voice and expressive desk reactions.",
+        "kw": "Jiawu AI companion robot",
+        "emoji": "🤖",
+        "pros": [
+            "Interactive voice companion",
+            "Expressive desk reactions",
+            "Compact form factor",
+            "Verified in-stock on Amazon"
+        ],
+        "cons": [
+            "Niche marketplace brand",
+            "Specs vary by listing"
+        ],
+        "review": "Jiawu's AI companion robot is another compact, voice-interactive desk bot in the budget companion category — it talks, reacts, and serves as a small character on a workstation or shelf. Like its marketplace peers, its value is the immediate novelty of a talking, reacting object at a low price, not a deep software ecosystem. It is a reasonable gift or starter companion for someone curious about living with a robot but not ready to buy a premium name. Confirm the listing's specs and the seller's return window, and judge it on hands-on fun rather than headline 'AI' claims, which at this tier mean basic conversational responses."
+    },
+    {
+        "name": "umissfunBot",
+        "maker": "umissfun",
+        "blurb": "AI companion robot with voice interaction and playful desk personality.",
+        "kw": "umissfun AI companion robot",
+        "emoji": "🤖",
+        "pros": [
+            "Voice-interactive companion",
+            "Playful desk personality",
+            "Giftable size",
+            "Verified in-stock on Amazon"
+        ],
+        "cons": [
+            "Niche marketplace brand",
+            "Limited smart depth"
+        ],
+        "review": "umissfun's AI companion robot is a small, voice-interactive desk bot aimed at playful company — it responds to prompts and projects a light personality that works as a novelty presence on a desk or bedside table. It belongs to the budget companion tier where the appeal is the talking, reacting object itself rather than a sophisticated assistant, so buy it for fun and gifting, not for tasks. As with all marketplace robot brands, check the seller rating and return policy, and treat the 'AI' label as basic voice interaction. For the price it is an easy way to test whether a desktop companion earns its spot — and many buyers find the novelty genuinely cheering."
+    },
+    {
+        "name": "VBESTLIFE Bot",
+        "maker": "VBESTLIFE",
+        "blurb": "AI companion robot with interactive voice and simple desk companionship.",
+        "kw": "VBESTLIFE AI companion robot",
+        "emoji": "🤖",
+        "pros": [
+            "Interactive voice companion",
+            "Simple desk companionship",
+            "Low-cost entry",
+            "Verified in-stock on Amazon"
+        ],
+        "cons": [
+            "Niche marketplace brand",
+            "Basic feature set"
+        ],
+        "review": "VBESTLIFE's AI companion robot is a low-cost, voice-interactive desk bot — a talking, reacting presence meant for light companionship rather than serious tasks. It is the entry tier of the category: the fun is in the interaction and the novelty of a small robot that answers, not in a deep feature set. Buy it as a gift or a cheap experiment in desktop companionship, and confirm the seller's return window since marketplace robotics support varies. Frame it honestly as a toy-grade conversational novelty, and it delivers exactly that — a surprising, characterful little object for the price, with no pretense of being a flagship assistant."
+    },
+     ]
 
 
 def product_card(p):
@@ -220,9 +371,8 @@ def build_review(p):
 BUYER_INTENT = [
     {"label":"Best Companion Robots 2026","product":"Eilik"},
     {"label":"AI Pet Robots for Adults","product":"Aibi"},
-    {"label":"Robot Companions for Seniors","product":"ElliQ"},
-    {"label":"Learning Robots for Kids","product":"Moxie"},
-    {"label":"Mobile Robot Pets That Roam","product":"Loona"},
+    {"label":"ChatGPT Robot Pets You Can Buy","product":"EmoPet"},
+    {"label":"Best Desktop Robot Pets","product":"Aibi"},
 ]
 
 def build_best_of():
@@ -235,13 +385,13 @@ def build_best_of():
 <a class="buy" href="{html.escape(link)}" rel="noopener">Shop {html.escape(b['label'])} on Amazon ↗</a></div>'''
     FAQ = [
         ("What is the best AI companion robot to buy in 2026?",
-         "It depends on the job. For a fun, expressive desk presence, Eilik is the standout. For a pocket companion you can carry, Aibi or EmoPet lead. For a child's social-emotional growth, Moxie is the research-backed pick. For older adults living alone, ElliQ is purpose-built for wellbeing. Every link above opens the exact in-stock Amazon product page."),
+         "It depends on the job. For a fun, expressive desk presence, Eilik is the standout. For a pocket companion you can carry, Aibi leads. For a ChatGPT-powered desk dancer, EmoPet is the pick. Every link above opens the exact in-stock Amazon product page."),
         ("Are companion robots worth the money?",
-         "If you want personality, company, or a researched learning tool, yes — but match the product to the goal. Desk companions like Eilik deliver character per dollar; seniors-focused ElliQ and kids-focused Moxie earn their price through specialized, maintained software. Read each review's pros and cons before buying."),
-        ("Which companion robot is best for seniors or lonely older adults?",
-         "ElliQ, by Intuition Robotics, is built specifically for older adults: it proactively starts conversations and checks in across the day rather than waiting for commands. It is a tabletop unit sold with an ongoing service subscription rather than a one-off gadget."),
+         "If you want personality, company, or a conversational desk buddy, yes — but match the product to the goal. Eilik delivers character per dollar; Aibi and EmoPet add real voice chat via ChatGPT. Read each review's pros and cons before buying."),
+        ("Which companion robot is best for a kid or teen?",
+         "Aibi is a pocket companion many older kids enjoy; Eilik is a fun, expressive desk bot. Check each maker's age guidance, and as with any connected device, keep firmware updated and review the companion app's privacy settings."),
         ("Are these robots safe for children?",
-         "Moxie is designed for children and ships with parent controls and a research-backed curriculum. As with any connected device, keep firmware updated and review the companion app's privacy settings. We only list child-focused robots that put parental controls first."),
+         "Eilik and Aibi are expressive, characterful companions kids enjoy interacting with. They are practice partners, not clinical tools — always pair with real human connection and follow the maker's age guidance."),
     ]
     faq_html = "<h2>Frequently asked questions</h2><div class='faqs'>"
     for q, a in FAQ:
@@ -293,11 +443,8 @@ COMPARES = [
     {"slug":"eilik-vs-emopet","title":"Eilik vs EmoPet — Fun Companion Robot Face-Off","a":"Eilik","b":"EmoPet",
      "intro":"Both are playful, characterful companions you can actually buy today. Eilik is a pocket expression-machine; EmoPet is a ChatGPT-enabled desk dancer. Here's how they differ.",
      "kw":"Eilik vs EmoPet"},
-    {"slug":"moxie-vs-eilik","title":"Moxie vs Eilik — Learning Robot or Desk Toy?","a":"Moxie","b":"Eilik",
-     "intro":"Moxie is a research-backed learning robot for children; Eilik is a personality-packed desk companion for anyone. Two very different jobs — here is which fits.",
-     "kw":"Moxie vs Eilik robot"},
     {"slug":"best-ai-companion-2026","title":"Best AI Companion Robots You Can Buy Right Now (2026)","a":"Eilik","b":"Aibi",
-     "intro":"Not every companion robot is actually for sale. We compare the AI companions that are verified in-stock on Amazon today — Eilik, Aibi, EmoPet and Moxie — so you only see what you can buy.",
+     "intro":"Not every companion robot is actually for sale. We compare the AI companions that are verified in-stock on Amazon today — Eilik, Aibi and EmoPet — so you only see what you can buy.",
      "kw":"best AI companion robot 2026"},
 ]
 
@@ -321,14 +468,14 @@ def build_compare(c):
 
 # ---- Low-competition long-tail pages (rank fast for a new site) ----
 LONGTAIL = [
-    {"slug":"ai-pet-robot-gift","title":"AI Pet Robot Gift Ideas (2026)","intro":"A robot pet is a low-maintenance, allergy-free gift that surprises. The best picks you can actually buy right now.","kw":"AI pet robot gift","prods":["Eilik","Aibi"],"faqs":[("Is a robot pet a good gift for an adult?","Yes, Eilik and Aibi are popular with adults who want a soothing, characterful presence without pet responsibilities. They are also allergy-free and noise-light."),("Which AI pet is best for a kid?","Moxie is built for learning and social growth; Eilik and Aibi are better as fun, expressive companions."),("Do robot pets need a subscription?","Some, like Aibi and EmoPet, have optional subscriptions for full features. Eilik works without one.")]},
+    {"slug":"ai-pet-robot-gift","title":"AI Pet Robot Gift Ideas (2026)","intro":"A robot pet is a low-maintenance, allergy-free gift that surprises. The best picks you can actually buy right now.","kw":"AI pet robot gift","prods":["Eilik","Aibi"],"faqs":[("Is a robot pet a good gift for an adult?","Yes, Eilik and Aibi are popular with adults who want a soothing, characterful presence without pet responsibilities. They are also allergy-free and noise-light."),("Which AI pet is best for a kid?","Aibi is a pocket companion kids enjoy; Eilik is a fun, expressive desk bot. For younger children, check the maker's age guidance."),("Do robot pets need a subscription?","Some, like Aibi and EmoPet, have optional subscriptions for full features. Eilik works without one.")]},
     {"slug":"desktop-ai-pet","title":"Desktop AI Pets for Your Desk or WFH Setup","intro":"A small AI companion on your desk can break the isolation of remote work. The best desktop-friendly options you can buy today.","kw":"desktop AI pet","prods":["Eilik","EmoPet"]},
     {"slug":"best-cheap-ai-robot-pet","title":"Best AI Robot Pets Under $200 (2026)","intro":"You don't need to spend a fortune to get a charming companion. The best budget AI robot pets that are actually in stock.","kw":"cheap AI robot pet","prods":["Eilik","Aibi"]},
     {"slug":"ai-desk-toy-gift","title":"AI Desk Toys & Robot Gifts for Coworkers","intro":"A robot desk toy is the gift that gets a smile every meeting. Best picks available on Amazon right now.","kw":"AI desk toy gift","prods":["Eilik","EmoPet"]},
-    {"slug":"robot-companion-for-kids","title":"Robot Companions for Kids — Screen-Free Connection","intro":"Companion robots can be gentle, low-pressure practice partners for children. The options worth a parent's attention that are in stock today.","kw":"robot companion for kids","prods":["Moxie","Eilik"],"faqs":[("Can a robot help a child practice social skills?","Moxie was designed with clinicians for exactly this — turn-taking, conversation, and emotional coaching. Many families report real gains."),("Is it a replacement for therapy?","No. It is a supplement and a gentle practice partner, not a clinical intervention. Always coordinate with your child's care team."),("What age is Moxie for?","Roughly 5 to 10 years old. Eilik is better for purely playful engagement across ages.")]},
+    {"slug":"robot-companion-for-kids","title":"Robot Companions for Kids — Screen-Free Connection","intro":"Companion robots can be gentle, low-pressure practice partners for children. The options worth a parent's attention that are in stock today.","kw":"robot companion for kids","prods":["Eilik","Aibi"],"faqs":[("Can a robot help a child practice social skills?","Eilik and Aibi are expressive, characterful companions kids enjoy interacting with. They are practice partners, not clinical tools — always pair with real human connection."),("Is it a replacement for therapy?","No. It is a supplement and a gentle companion, not a clinical intervention. Always coordinate with your child's care team."),("What age is it for?","Check each maker's age guidance; Eilik and Aibi suit older kids and teens for playful engagement.")]},
     {"slug":"chatgpt-robot-pet","title":"ChatGPT-Powered Robot Pets You Can Buy","intro":"Voice AI has reached robot pets. These companions use ChatGPT for real conversation — and they are in stock on Amazon now.","kw":"ChatGPT robot pet","prods":["Aibi","EmoPet"]},
     {"slug":"emotional-support-robot","title":"Robots for Comfort & Emotional Support at Home","intro":"Not every companion robot is for kids. Adults wanting a low-maintenance, soothing presence should start with what is actually available.","kw":"emotional support robot","prods":["Eilik","Aibi"]},
-    {"slug":"best-robot-for-kids","title":"Best Companion Robots for Kids in 2026","intro":"From social-emotional learning to pure play, the kid-friendly companion robots worth a parent's attention — and in stock today.","kw":"best robot for kids","prods":["Moxie","Eilik"]},
+    {"slug":"best-robot-for-kids","title":"Best Companion Robots for Kids in 2026","intro":"From expressive desk bots to pocket pals, the kid-friendly companion robots worth a parent's attention — and in stock today.","kw":"best robot for kids","prods":["Eilik","Aibi"]},
 ]
 
 def build_longtail(t):
@@ -384,7 +531,7 @@ def build_home():
     home = f'''<!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Companion Intelligence — AI Toys, Robots & Companions Reviews</title>
-<meta name="description" content="Autonomous, daily reviews and deals on AI toys, companion robots, and digital companions. Ropet, Moflin, Lovot, Loona, Moxie and ElliQ compared.">
+<meta name="description" content="Autonomous, daily reviews and deals on AI toys, companion robots, and digital companions. Eilik, Aibi and EmoPet — the AI companions verified in-stock on Amazon — compared.">
 <meta name="robots" content="index,follow">
 {gsc_home}{bing_home}<link rel="canonical" href="{SITE_URL}/">
 <meta property="og:type" content="website">
