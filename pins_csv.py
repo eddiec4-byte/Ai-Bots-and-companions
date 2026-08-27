@@ -17,6 +17,7 @@ rendered to pins/ and deployed to GitHub Pages (public URLs). Reuses
 pinterest_publisher.build_caption / render_pin so copy matches the auto-pinner.
 """
 import os
+import sys
 import csv
 import generate
 import pinterest_publisher as pp
@@ -24,6 +25,31 @@ import pinterest_publisher as pp
 SITE = generate.SITE
 OUTDIR = pp.OUTDIR
 os.makedirs(OUTDIR, exist_ok=True)
+
+
+def validate(rows, board):
+    """Fail loudly (exit non-zero) if any pin would break Pinterest's bulk upload.
+    Catches the two real failure modes seen in production:
+      1. @url: prefix anywhere -> Pinterest reads it as a video link -> pin dies.
+      2. non-https (or empty) URL in Media URL / Link -> 'no content extracted'.
+    This runs BEFORE the file is written, so a broken CSV is never produced.
+    """
+    errors = []
+    for i, r in enumerate(rows, 1):
+        for col in ("Media URL", "Link"):
+            val = r.get(col, "")
+            if not val:
+                errors.append(f"row {i} ({r.get('Title','?')}): {col} is empty")
+                continue
+            if "@url:" in val:
+                errors.append(f"row {i} ({r.get('Title','?')}): {col} contains forbidden '@url:' prefix -> {val}")
+            if not val.startswith("https://"):
+                errors.append(f"row {i} ({r.get('Title','?')}): {col} is not https -> {val}")
+        if not r.get("Pinterest board"):
+            errors.append(f"row {i}: Pinterest board is empty")
+        elif "." in r["Pinterest board"]:
+            errors.append(f"row {i}: Pinterest board '{r['Pinterest board']}' contains '.' (invalid in board title)")
+    return errors
 
 # Exact Pinterest bulk-editor columns (order matters to the importer).
 CSV_COLS = [
@@ -57,6 +83,14 @@ for p in generate.PRODUCTS:
         "Publish date": "",            # publish immediately
         "Keywords": f"{p['name']}, {p['maker']}, AI companion, robot pet, review",
     })
+
+# --- SAFETY NET: never emit a CSV Pinterest will reject ---
+errors = validate(rows, board)
+if errors:
+    sys.stderr.write("PIN CSV VALIDATION FAILED — not writing broken file:\n")
+    for e in errors:
+        sys.stderr.write(f"  - {e}\n")
+    sys.exit(1)
 
 with open(csv_path, "w", newline="", encoding="utf-8") as f:
     w = csv.DictWriter(f, fieldnames=CSV_COLS)
