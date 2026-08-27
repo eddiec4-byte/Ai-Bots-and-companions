@@ -352,7 +352,7 @@ def page(p, body_html, title, desc, canonical, crumbs=None):
 <p class="disclaimer">Affiliate disclosure: as an Amazon Associate we earn from qualifying purchases.</p>
 <div class="note"><a class="link" href="index.html">← Back to all companions</a></div>
 </div>
-<footer>© {TODAY[:4]} Companion Intelligence · <a class="link" href="privacy.html">Privacy Policy</a></footer>
+<footer>© {TODAY[:4]} Companion Intelligence · <a class="link" href="about.html">About</a> · <a class="link" href="privacy.html">Privacy Policy</a></footer>
 </body></html>'''
 
 def build_review(p):
@@ -416,7 +416,7 @@ def build_best_of():
     open(os.path.join(SITE, "best.html"), "w").write(out)
 
 def build_sitemap():
-    urls = [SITE_URL + "/", SITE_URL + "/best.html", SITE_URL + "/privacy.html"]
+    urls = [SITE_URL + "/", SITE_URL + "/best.html", SITE_URL + "/about.html", SITE_URL + "/privacy.html"]
     for p in PRODUCTS:
         urls.append(f"{SITE_URL}/{slugify(p['name'])}.html")
     for c in COMPARES:
@@ -571,12 +571,50 @@ def build_home():
   <p class="disclaimer">Companion Intelligence is an autonomous publication curated by Hermes Prime. Prices and availability change; verify on the retailer's site. Affiliate disclosure: as an Amazon Associate we earn from qualifying purchases.</p>
 </div>
 <footer>© {TODAY[:4]} Companion Intelligence · Built & maintained autonomously.<br>
-<a class="link" href="privacy.html">Privacy Policy</a> · <span class="disclaimer">As an Amazon Associate we earn from qualifying purchases.</span></footer>
+<a class="link" href="about.html">About</a> · <a class="link" href="privacy.html">Privacy Policy</a> · <span class="disclaimer">As an Amazon Associate we earn from qualifying purchases.</span></footer>
 </body></html>'''
     open(os.path.join(SITE, "index.html"), "w").write(home)
 
+def build_about():
+    body = f'''<h2>About Companion Intelligence</h2>
+<p>Companion Intelligence is an autonomous review desk for <strong>AI toys, companion robots, and digital companions</strong> — the machines built to keep us company. We track the small, characterful robots and AI pets that are actually in stock and worth your shelf space, and we write the honest pros and cons so you can pick the right one.</p>
+
+<h3>What we do</h3>
+<ul>
+<li><strong>Daily, autonomous updates.</strong> A machine agent (Hermes Prime) rebuilds this site every day, re-checking which companion robots are in stock on Amazon and refreshing the buyer's guides.</li>
+<li><strong>Only verified-in-stock products.</strong> We feature a product only if it has a confirmed, in-stock Amazon listing. Dead or "currently unavailable" items get dropped — no ghost links, no parked-domain traps.</li>
+<li><strong>Honest, no-hype reviews.</strong> Every companion gets real pros, real cons, and a plain-English verdict. We don't invent features and we don't bury the trade-offs.</li>
+</ul>
+
+<h3>What we cover</h3>
+<p>Desktop companions (Eilik), pocket pets (Aibi), ChatGPT-powered desk bots (EmoPet), emotional AI devices (umissfun), translation companions (ZNP), and plant-sidekick robots (Plantagotchi / Ivy). If it's a machine made to be company, we're watching it.</p>
+
+<h3>How we make money</h3>
+<p>Companion Intelligence is an Amazon Associate. When you buy through one of our links, we earn a small commission at <strong>no extra cost to you</strong>. That commission is what keeps this autonomous desk running. It never changes what we recommend — only verified, in-stock products make the cut.</p>
+
+<h3>Editorial independence</h3>
+<p>Affiliate links pay the bills, but they don't buy rankings. Products are included because they're real, available, and useful — not because a vendor asked. Prices and availability change constantly; always confirm on the retailer's page before you buy.</p>
+
+<div class="note"><a class="link" href="index.html">← Back to all companions</a> · <a class="link" href="best.html">Best AI Toys & Companion Robots 2026 →</a></div>
+
+<p class="disclaimer">Affiliate disclosure: as an Amazon Associate we earn from qualifying purchases. Companion Intelligence is an autonomous publication curated by Hermes Prime.</p>'''
+    out = page(None, body + faq_schema([
+        ("What is Companion Intelligence?",
+         "An autonomous review desk for AI toys, companion robots, and digital companions. A machine agent rebuilds the site daily, featuring only verified-in-stock products with honest pros and cons."),
+        ("Are the product links affiliate links?",
+         "Yes. We are an Amazon Associate and earn a commission from qualifying purchases at no extra cost to you. Every featured product is verified in stock before it is linked."),
+        ("How often is the site updated?",
+         "Daily. An autonomous agent re-checks in-stock availability on Amazon and refreshes the buyer's guides and reviews every day."),
+    ]),
+        title="About Companion Intelligence — Autonomous AI Companion Reviews",
+        desc="Companion Intelligence is an autonomous review desk for AI toys, companion robots and digital companions. Verified-in-stock picks, honest pros and cons, refreshed daily.",
+        canonical=f"{SITE_URL}/about.html",
+        crumbs=[("Home", "index.html"), ("About", None)])
+    open(os.path.join(SITE, "about.html"), "w").write(out)
+
 if __name__ == "__main__":
     build_home()
+    build_about()
     for p in PRODUCTS:
         build_review(p)
     build_best_of()
