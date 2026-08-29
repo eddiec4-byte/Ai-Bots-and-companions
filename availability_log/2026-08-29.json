@@ -1,0 +1,82 @@
+{
+  "date": "2026-08-29",
+  "checked": 7,
+  "live": 4,
+  "drop_candidates": [
+    "EmoCompanion",
+    "Plantagotchi",
+    "umissfunBot"
+  ],
+  "products": [
+    {
+      "name": "Eilik",
+      "asin": "B09XGQMSMB",
+      "host": "amazon.com",
+      "status": 200,
+      "unavailable": false,
+      "title": "ENERGIZE LAB Eilik \u2013Your Desktop Companion Full of Personality with Expressive Animations &amp; Reactions, Touch-Responsive Play, Mini Games, Robot for Adults &amp; Kids",
+      "note": "",
+      "verdict": "LIVE"
+    },
+    {
+      "name": "Aibi",
+      "asin": "B0F1TH7D65",
+      "host": "amazon.com",
+      "status": 200,
+      "unavailable": false,
+      "title": "Aibi Pocket Pet - Wearable Robot | ChatGPT Powered AI Companion with Voice Commands, Emotional Interaction, Singing &amp; Dancing | Magnetically Attaches to Anywhere | Ultra Portable",
+      "note": "",
+      "verdict": "LIVE"
+    },
+    {
+      "name": "EmoPet",
+      "asin": "B0DDT2MT9K",
+      "host": "amazon.com",
+      "status": 200,
+      "unavailable": false,
+      "title": "EMOPET AI Desk Robot Companion - ChatGPT Enabled with Voice Commands &amp; Dancing, Interactive AI Robot Pet with Personality, for Adults and Kids",
+      "note": "",
+      "verdict": "LIVE"
+    },
+    {
+      "name": "EmoCompanion",
+      "asin": "B0H267X7VR",
+      "host": "amazon.com",
+      "status": 200,
+      "unavailable": true,
+      "title": "Emotional Robot for Companion AI Robot for Companion with Voice Commands Singing Dance Chatbot for All Ages (Black)",
+      "note": "",
+      "verdict": "UNAVAILABLE"
+    },
+    {
+      "name": "ZNP Translator",
+      "asin": "B0GZNM6NVD",
+      "host": "amazon.com",
+      "status": 200,
+      "unavailable": false,
+      "title": "ZNP Digital Badge AI Companion, Wearable Translation Translator with HD Touchscreen, Real-Time Interactive Reactions, Bluetooth 6.0 Portable Pin for Travel Business &amp; Life",
+      "note": "",
+      "verdict": "LIVE"
+    },
+    {
+      "name": "Plantagotchi",
+      "asin": "B0FZ57DPBJ",
+      "host": "amazon.com",
+      "status": 200,
+      "unavailable": true,
+      "title": "Ivy Interactive AI Desk Companion &amp; Smart Plant Pet Indoor Planter Blush",
+      "note": "",
+      "verdict": "UNAVAILABLE"
+    },
+    {
+      "name": "umissfunBot",
+      "asin": "B0GH2G2PKQ",
+      "host": "amazon.com",
+      "status": 200,
+      "unavailable": true,
+      "title": "umissfun Emotional AI Companion Device,AI Chat Companion, AI Desktop Robot Companion,Voice Understanding,Personality Design,Tech&amp;Gadget Gift,Geek,Desktop Setup,True Empathy AI-Grows with You (Gray)",
+      "note": "",
+      "verdict": "UNAVAILABLE"
+    }
+  ]
+}
