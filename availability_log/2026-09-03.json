@@ -1,0 +1,80 @@
+{
+  "date": "2026-09-03",
+  "checked": 7,
+  "live": 6,
+  "drop_candidates": [
+    "EmoCompanion"
+  ],
+  "products": [
+    {
+      "name": "Eilik",
+      "asin": "B09XGQMSMB",
+      "host": "amazon.com",
+      "status": 200,
+      "unavailable": false,
+      "title": null,
+      "note": "",
+      "verdict": "LIVE"
+    },
+    {
+      "name": "Aibi",
+      "asin": "B0F1TH7D65",
+      "host": "amazon.com",
+      "status": 200,
+      "unavailable": false,
+      "title": null,
+      "note": "",
+      "verdict": "LIVE"
+    },
+    {
+      "name": "EmoPet",
+      "asin": "B0DDT2MT9K",
+      "host": "amazon.com",
+      "status": 200,
+      "unavailable": false,
+      "title": null,
+      "note": "",
+      "verdict": "LIVE"
+    },
+    {
+      "name": "EmoCompanion",
+      "asin": "B0H267X7VR",
+      "host": "amazon.com",
+      "status": 200,
+      "unavailable": true,
+      "title": "Emotional Robot for Companion AI Robot for Companion with Voice Commands Singing Dance Chatbot for All Ages (Black)",
+      "note": "",
+      "verdict": "UNAVAILABLE"
+    },
+    {
+      "name": "ZNP Translator",
+      "asin": "B0GZNM6NVD",
+      "host": "amazon.com",
+      "status": 200,
+      "unavailable": false,
+      "title": null,
+      "note": "",
+      "verdict": "LIVE"
+    },
+    {
+      "name": "Plantagotchi",
+      "asin": "B0FZ57DPBJ",
+      "host": "amazon.com",
+      "status": 200,
+      "unavailable": false,
+      "title": null,
+      "note": "",
+      "verdict": "LIVE"
+    },
+    {
+      "name": "umissfunBot",
+      "asin": "B0GH2G2PKQ",
+      "host": "amazon.com",
+      "status": 200,
+      "unavailable": false,
+      "title": null,
+      "note": "",
+      "verdict": "LIVE"
+    }
+  ]
+}
