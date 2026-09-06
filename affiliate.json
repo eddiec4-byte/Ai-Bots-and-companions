@@ -39,7 +39,24 @@
     "date": "2026-08-27",
     "method": "Amazon US dp/ASIN title + 'Currently unavailable' scrape (real browser)",
     "policy": "Featured catalog contains ONLY products with a verified, in-stock Amazon ASIN. Every primary buy link is an exact dp/ASIN (locale-safe). Products without a verified in-stock ASIN are NOT featured.",
-    "removed_unavailable_or_not_listed": ["Ropet (no ASIN / parked domain)", "Moflin (no ASIN)", "Lovot (no ASIN)", "Loona (no in-stock ASIN; B0C2C9LJNQ is an Eilik alias)", "ElliQ (no ASIN)", "Aibo (no ASIN)", "Vector (B0FV3M8GWW UNAVAILABLE)", "LOOI (B0F1YWF96K UNAVAILABLE)", "Jennie (no ASIN)", "Moxie (B07984JN3L dead/blocked link, removed 2026-08-27)", "Miko 3 (B09QHP6SMC DEAD - Page Not Found, removed 2026-08-27)", "ConvoBot (B0GY8W5L6G DEAD - Page Not Found, removed 2026-08-27)", "AnnadueBot (B0HBCMFDXY DEAD - Page Not Found, removed 2026-08-27)", "AIBot X1 (B0H2Z1JBG3 DEAD - Page Not Found, removed 2026-08-27)", "JiawuBot (B0H8SGQTWM DEAD - Page Not Found, removed 2026-08-27)", "VBESTLIFE Bot (B0H7T572N2 DEAD - Page Not Found, removed 2026-08-27)"]
+    "removed_unavailable_or_not_listed": [
+      "Ropet (no ASIN / parked domain)",
+      "Moflin (no ASIN)",
+      "Lovot (no ASIN)",
+      "Loona (no in-stock ASIN; B0C2C9LJNQ is an Eilik alias)",
+      "ElliQ (no ASIN)",
+      "Aibo (no ASIN)",
+      "Vector (B0FV3M8GWW UNAVAILABLE)",
+      "LOOI (B0F1YWF96K UNAVAILABLE)",
+      "Jennie (no ASIN)",
+      "Moxie (B07984JN3L dead/blocked link, removed 2026-08-27)",
+      "Miko 3 (B09QHP6SMC DEAD - Page Not Found, removed 2026-08-27)",
+      "ConvoBot (B0GY8W5L6G DEAD - Page Not Found, removed 2026-08-27)",
+      "AnnadueBot (B0HBCMFDXY DEAD - Page Not Found, removed 2026-08-27)",
+      "AIBot X1 (B0H2Z1JBG3 DEAD - Page Not Found, removed 2026-08-27)",
+      "JiawuBot (B0H8SGQTWM DEAD - Page Not Found, removed 2026-08-27)",
+      "VBESTLIFE Bot (B0H7T572N2 DEAD - Page Not Found, removed 2026-08-27)"
+    ]
   },
-  "notes": "IMPORTANT: only list products here that are VERIFIED in-stock on Amazon. amazon_asin keys MUST match product names in generate.py PRODUCTS. Never guess ASINs. Vector/LOOI were removed because they were 'Currently unavailable'. Loona's apparent ASIN B0C2C9LJNQ actually resolves to Eilik (alias) so Loona has no real listing."
+  "notes": "IMPORTANT: only list products here that are VERIFIED in-stock on Amazon. amazon_asin maps product name -> exact ASIN. Do not add a product unless you have confirmed it is currently in stock on Amazon with that ASIN. For products that might be out of stock, use affiliate links that search Amazon rather than direct dp links."
 }
