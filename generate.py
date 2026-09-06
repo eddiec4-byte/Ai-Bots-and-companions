@@ -624,4 +624,18 @@ if __name__ == "__main__":
         build_longtail(t)
     build_sitemap()
     build_robots()
+    # --- Content-safety build gate (FTC / Amazon Associates) ---
+    import importlib.util, pathlib as _pl, sys as _sys
+    _CL_PATH = _pl.Path(r"C:\Users\eddke\AppData\Local\hermes\skills\software-development\pinterest-affiliate-automation\scripts\content_lint.py")
+    _spec = importlib.util.spec_from_file_location("content_lint", _CL_PATH)
+    _content_lint = importlib.util.module_from_spec(_spec); _spec.loader.exec_module(_content_lint)
+    _lint_probs = _content_lint.lint_all(_sys.modules[__name__])
+    if _lint_probs:
+        print("=" * 60, file=_sys.stderr)
+        print("COMPLIANCE LINT FAILED — build aborted", file=_sys.stderr)
+        for _x in _lint_probs:
+            print(f"  - {_x}", file=_sys.stderr)
+        print("=" * 60, file=_sys.stderr)
+        _sys.exit(2)
+    print("COMPLIANCE LINT CLEAN.")
     print(f"Built site at {SITE} on {TODAY} (amazon tag: {TAG}) — index + {len(PRODUCTS)} reviews + best.html + {len(COMPARES)} compares + {len(LONGTAIL)} longtail + sitemap.xml + robots.txt")
