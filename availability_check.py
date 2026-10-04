@@ -32,24 +32,70 @@ CTX.check_hostname = False
 CTX.verify_mode = ssl.CERT_NONE
 
 UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
-      "(KHTML, like Gecko) Chrome/120.0 Safari/537.36")
-H = {"User-Agent": UA, "Accept-Language": "en-US,en;q=0.9"}
+      "(KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36")
+# Full browser-like header set (fixed 2026-10-04): the old UA-only headers got a
+# 3781-byte bot-wall stub with no productTitle, which made every product UNKNOWN
+# and previously (with the whole-page substring test) produced false UNAVAILABLE
+# flags. These headers return the real ~2MB product page with productTitle +
+# add-to-cart, so LIVE vs UNAVAILABLE is decided on real DOM.
+H = {
+    "User-Agent": UA,
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Accept-Encoding": "gzip, deflate",
+    "Upgrade-Insecure-Requests": "1",
+    "Sec-Fetch-Dest": "document",
+    "Sec-Fetch-Mode": "navigate",
+    "Sec-Fetch-Site": "none",
+    "Sec-Fetch-User": "?1",
+    "Cache-Control": "max-age=0",
+}
 
 def probe(asin, host="amazon.com", retries=2):
-    """Return dict with status, unavailable, title(optional), note."""
+    """Return dict with status, unavailable, title(optional), note.
+
+    Detection rule (fixed 2026-10-04): a page is only treated as UNAVAILABLE
+    when we got a REAL product page (productTitle present) AND the availability
+    block itself says so. The old rule scanned the WHOLE page for the substring
+    "Currently unavailable", which false-positived on live listings whose page
+    contains that phrase in unrelated boilerplate/recommendation modules (it
+    flagged umissfunBot B0GH2G2PKQ as UNAVAILABLE while its buy box was live).
+    A bot-wall stub (tiny page, no productTitle) is UNKNOWN, never UNAVAILABLE.
+    """
     last = None
     for attempt in range(retries + 1):
         try:
             url = f"https://www.{host}/dp/{asin}"
             req = urllib.request.Request(url, headers=H)
             r = urllib.request.urlopen(req, timeout=20, context=CTX)
-            body = r.read().decode("utf-8", "ignore")
+            raw = r.read()
+            if r.headers.get("Content-Encoding") == "gzip":
+                import gzip as _gz
+                raw = _gz.decompress(raw)
+            body = raw.decode("utf-8", "ignore")
             status = r.status
             title = None
             m = re.search(r'<span[^>]*id="productTitle"[^>]*>(.*?)</span>', body, re.I | re.S)
             if m:
                 title = re.sub(r"\s+", " ", m.group(1)).strip()
-            unavailable = "Currently unavailable" in body
+            # Scope the unavailability test to the availability block, and only
+            # trust it when a real product page was served (title present).
+            avail_block = ""
+            am = re.search(r'id="availability".{0,600}?</div>', body, re.I | re.S)
+            if am:
+                avail_block = am.group(0)
+            unav_in_block = bool(re.search(
+                r"currently unavailable|we don'?t know when or if this item will be back",
+                avail_block, re.I))
+            has_buybox = ('id="add-to-cart-button"' in body) or ('id="buy-now-button"' in body)
+            if not title:
+                unavailable = None  # bot-wall / non-product page -> unknown
+            elif unav_in_block and not has_buybox:
+                unavailable = True
+            elif has_buybox:
+                unavailable = False
+            else:
+                unavailable = None
             last = {"status": status, "unavailable": unavailable, "title": title, "note": ""}
             return last
         except urllib.error.HTTPError as e:

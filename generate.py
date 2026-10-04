@@ -114,24 +114,6 @@ PRODUCTS = [
         "review": "This Bluetooth conversation robot is built for language practice and casual chat — pair it over Bluetooth and it answers, quizzes, and role-plays in a choice of languages, which makes it a low-cost speaking partner for learners who want reps without a tutor. The appeal is simplicity: no app maze, just talk and it responds, with modes that shift from free conversation to structured drills. As a companion it is functional rather than charismatic — the personality is in the dialogue, not a physical character — but for someone drilling a second language or wanting a hands-free chat buddy, it does a narrow job well. Manage expectations on build and support since it ships from the marketplace rather than a marquee brand; treat it as an inexpensive experiment in voice-led learning, not a flagship robot."
     },
     {
-        "name": "EmoCompanion",
-        "maker": "Generic (Marketplace)",
-        "blurb": "Emotional companion robot with voice commands, singing, and dancing reactions for mood and play.",
-        "kw": "emotional companion robot voice sing dance",
-        "emoji": "🎵",
-        "pros": [
-            "Voice-command interaction",
-            "Sings and dances for engagement",
-            "Mood/companion oriented",
-            "Verified in-stock on Amazon"
-        ],
-        "cons": [
-            "Marketplace brand, support varies",
-            "Limited 'smart' depth"
-        ],
-        "review": "This emotional companion robot leans into feel-good interaction: tell it to do something and it sings, dances, or responds with a bright reaction, which makes it an easy mood-lifter on a desk or shelf. It is a companion in the lightest sense — the charm is the performance and the responsiveness, not deep intelligence — but that is exactly what some buyers want from a small, playful presence. Think of it as an animated novelty that happens to take voice commands, rather than a conversational assistant. Build and software support will be marketplace-level, so buy it for the fun factor and the sing-and-dance payoff, and you will not be disappointed; expect a toy-grade experience, not a research-grade robot."
-    },
-    {
         "name": "AnnadueBot",
         "maker": "Annadue",
         "blurb": "Compact AI companion robot with interactive voice and desk-friendly reactions.",
