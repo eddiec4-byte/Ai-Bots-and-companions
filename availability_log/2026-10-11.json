@@ -1,0 +1,68 @@
+{
+  "date": "2026-10-11",
+  "checked": 6,
+  "live": 1,
+  "drop_candidates": [],
+  "products": [
+    {
+      "name": "Eilik",
+      "asin": "B09XGQMSMB",
+      "host": "amazon.com",
+      "status": 200,
+      "unavailable": false,
+      "title": "ENERGIZE LAB Eilik \u2013 Your Interactive Robot Companion, Full of Personality",
+      "note": "",
+      "verdict": "LIVE"
+    },
+    {
+      "name": "Aibi",
+      "asin": "B0F1TH7D65",
+      "host": "amazon.com",
+      "status": 200,
+      "unavailable": null,
+      "title": null,
+      "note": "",
+      "verdict": "UNKNOWN"
+    },
+    {
+      "name": "EmoPet",
+      "asin": "B0DDT2MT9K",
+      "host": "amazon.com",
+      "status": 200,
+      "unavailable": null,
+      "title": null,
+      "note": "",
+      "verdict": "UNKNOWN"
+    },
+    {
+      "name": "ZNP Translator",
+      "asin": "B0GZNM6NVD",
+      "host": "amazon.com",
+      "status": 200,
+      "unavailable": null,
+      "title": null,
+      "note": "",
+      "verdict": "UNKNOWN"
+    },
+    {
+      "name": "Plantagotchi",
+      "asin": "B0FZ57DPBJ",
+      "host": "amazon.com",
+      "status": 200,
+      "unavailable": null,
+      "title": null,
+      "note": "",
+      "verdict": "UNKNOWN"
+    },
+    {
+      "name": "umissfunBot",
+      "asin": "B0GH2G2PKQ",
+      "host": "amazon.com",
+      "status": 200,
+      "unavailable": null,
+      "title": null,
+      "note": "",
+      "verdict": "UNKNOWN"
+    }
+  ]
+}
