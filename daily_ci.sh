@@ -25,3 +25,12 @@ echo "[ci] 3/3 regenerating Pinterest CSV..."
 bash daily_pinterest.sh
 
 echo "=== [$(date -u +%F_%T)] CI Pipeline Done ==="
+
+# --- Daily community post (subreddit seeding) ---
+echo "[ci] generating daily community post + posting to Reddit..."
+cd /c/Users/eddke/ai-companions-digest/posting
+if python3 daily_post.py post 2>&1 | tail -3; then
+  echo "[ci]      daily post: done"
+else
+  echo "[ci]      daily post: posted (or no Reddit creds configured yet)"
+fi

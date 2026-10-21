@@ -9,10 +9,10 @@
       "asin": "B0F1TH7D65",
       "host": "amazon.com",
       "status": 200,
-      "unavailable": null,
-      "title": null,
+      "unavailable": false,
+      "title": "EMOPET Aibi Pocket Pet - Wearable Robot | ChatGPT Powered AI Companion with Voice Commands, Emotional Interaction, Singing &amp; Dancing | Magnetically Attaches to Anywhere | Ultra Portable",
       "note": "",
-      "verdict": "UNKNOWN"
+      "verdict": "LIVE"
     },
     {
       "name": "EmoPet",
@@ -29,10 +29,10 @@
       "asin": "B0GZNM6NVD",
       "host": "amazon.com",
       "status": 200,
-      "unavailable": false,
-      "title": "ZNP Digital Badge AI Companion, Wearable Translation Translator with HD Touchscreen, Real-Time Interactive Reactions, Bluetooth 6.0 Portable Pin for Travel Business &amp; Life",
+      "unavailable": null,
+      "title": null,
       "note": "",
-      "verdict": "LIVE"
+      "verdict": "UNKNOWN"
     },
     {
       "name": "Plantagotchi",
