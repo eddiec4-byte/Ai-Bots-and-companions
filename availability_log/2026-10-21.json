@@ -1,7 +1,7 @@
 {
   "date": "2026-10-21",
   "checked": 5,
-  "live": 4,
+  "live": 5,
   "drop_candidates": [],
   "products": [
     {
@@ -29,10 +29,10 @@
       "asin": "B0GZNM6NVD",
       "host": "amazon.com",
       "status": 200,
-      "unavailable": null,
-      "title": null,
+      "unavailable": false,
+      "title": "ZNP Digital Badge AI Companion, Wearable Translation Translator with HD Touchscreen, Real-Time Interactive Reactions, Bluetooth 6.0 Portable Pin for Travel Business &amp; Life",
       "note": "",
-      "verdict": "UNKNOWN"
+      "verdict": "LIVE"
     },
     {
       "name": "Plantagotchi",

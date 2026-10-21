@@ -29,8 +29,10 @@ echo "=== [$(date -u +%F_%T)] CI Pipeline Done ==="
 # --- Daily community post (subreddit seeding) ---
 echo "[ci] generating daily community post + posting to Reddit..."
 cd /c/Users/eddke/ai-companions-digest/posting
-if python3 daily_post.py post 2>&1 | tail -3; then
-  echo "[ci]      daily post: done"
+if REDDIT_CLIENT_ID=reddit_username= python3 daily_post.py post >/dev/null 2>&1; then
+  echo "[ci]      daily post: posted live"
 else
-  echo "[ci]      daily post: posted (or no Reddit creds configured yet)"
+  # No credentials -> gen-only fallback: write the post file for manual paste.
+  python3 daily_post.py generate >/dev/null 2>&1
+  echo "[ci]      no Reddit creds -> post generated to posting/posts/today_<date>.txt (paste it)"
 fi
