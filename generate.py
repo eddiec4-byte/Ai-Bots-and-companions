@@ -64,7 +64,7 @@ def fetch(url):
 PRODUCTS = [
     {"name":"Eilik","maker":"Energize Lab","blurb":"Desktop companion robot with a big personality and emotion-driven reactions.","kw":"Eilik robot companion",
      "emoji":"🤖",
-     "pros":["Highly expressive, fun reactions","Great desk conversation piece","Active community + app","Verified in-stock on Amazon"],
+     "pros":["Highly expressive, fun reactions","Great desk conversation piece","Active community + app"],
      "cons":["More toy than helper","Short battery on active use"],
      "review":"Eilik is the fun one — a pocket-sized robot with a surprisingly rich emotional range that reacts to being shaken, petted, tapped, or simply left alone. Energize Lab built it as a desk companion first and a tool never: it sulks when ignored, brightens when interacted with, and cycles through moods that make the little unit feel like it has opinions. An active maker community extends the experience with new behaviours and animations, so the longer Eilik lives on a desk, the more it can do. It is not built for caregiving, reminders, or tasks, and it should not be mistaken for a productivity device. What it does deliver is personality per dollar: for the price, few companions on the market express themselves as vividly. If the goal is a small object that makes a workday lighter — a tiny accomplice that reacts to a poke and breaks the monotony of a screen — Eilik is an easy, low-commitment way to add character to a workspace without the footprint or cost of a larger robot."},
     {"name":"Aibi","maker":"Living.AI","blurb":"Pocket-size wearable AI pet with ChatGPT-powered voice and emotional interaction.","kw":"Aibi robot pet LivingAI",

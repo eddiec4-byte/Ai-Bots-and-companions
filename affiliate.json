@@ -18,7 +18,6 @@
     "Jennie": "https://tombot.com/"
   },
   "amazon_asin": {
-    "Eilik": "B09XGQMSMB",
     "Aibi": "B0F1TH7D65",
     "EmoPet": "B0DDT2MT9K",
     "ZNP Translator": "B0GZNM6NVD",
@@ -26,7 +25,6 @@
     "umissfunBot": "B0GH2G2PKQ"
   },
   "asin_verified": {
-    "Eilik": "Energize Lab Eilik - desktop companion (IN STOCK, checked 2026-08-06)",
     "Aibi": "Aibi Pocket Pet - Living.AI wearable robot (IN STOCK, checked 2026-08-06)",
     "EmoPet": "EMOPET AI Desk Robot Companion - Living.AI (IN STOCK, checked 2026-08-06)",
     "ZNP Translator": "ZNP touchscreen translation companion (IN STOCK, verified 2026-08-27)",
@@ -34,10 +32,11 @@
     "umissfunBot": "umissfun AI companion robot (IN STOCK, verified 2026-08-27)"
   },
   "link_check": {
-    "date": "2026-08-27",
+    "date": "2026-10-21",
     "method": "Amazon US dp/ASIN title + 'Currently unavailable' scrape (real browser)",
     "policy": "Featured catalog contains ONLY products with a verified, in-stock Amazon ASIN. Every primary buy link is an exact dp/ASIN (locale-safe). Products without a verified in-stock ASIN are NOT featured.",
     "removed_unavailable_or_not_listed": [
+      "Eilik (B09XGQMSMB DEAD - HTTP 404 Not Found on Amazon, removed 2026-10-21)",
       "Ropet (no ASIN / parked domain)",
       "Moflin (no ASIN)",
       "Lovot (no ASIN)",

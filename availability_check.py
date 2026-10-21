@@ -88,6 +88,21 @@ def probe(asin, host="amazon.com", retries=2):
                 r"currently unavailable|we don'?t know when or if this item will be back",
                 avail_block, re.I))
             has_buybox = ('id="add-to-cart-button"' in body) or ('id="buy-now-button"' in body)
+            # Broaden buybox detection: Amazon sometimes renders the cart button
+            # with a slightly different id, or the buybox as a JS feature div.
+            if not has_buybox:
+                has_buybox = (re.search(r'id=["\']add-to-cart-button["\']', body) is not None) or \
+                             ('data-csa-c-content-id="buybox"' in body) or \
+                             ('Add to Cart' in body and 'outOfStockBuyBox_feature_div' in body)
+            # Embedded availability JSON payload: "availability":{"status":"IN_STOCK"}
+            # more reliable than the plain-text block (JS-lazy-rendered on some pages).
+            jsonm = re.search(r'availability.{0,500}?"status"\s*:\s*["\']?IN_STOCK["\']?', body, re.I)
+            if jsonm:
+                unavailable = False
+            elif jsonm is None:
+                jsonm = re.search(r'availability.{0,500}?"status"\s*:\s*["\']?OUT_OF_STOCK["\']?', body, re.I)
+                if jsonm:
+                    unavailable = True
             if not title:
                 unavailable = None  # bot-wall / non-product page -> unknown
             elif unav_in_block and not has_buybox:
@@ -110,8 +125,10 @@ def probe(asin, host="amazon.com", retries=2):
     return last
 
 def check_asin(asin):
-    """Probe .com, fall back to .nl if .com looks blocked (no 200)."""
+    """Probe .com. A 404 means the listing is gone -> DEAD (no .nl fallback)."""
     r = probe(asin, "amazon.com")
+    if r["status"] == 404:
+        return r, "amazon.com"
     if r["status"] != 200:
         rn = probe(asin, "amazon.nl")
         if rn["status"] == 200:
