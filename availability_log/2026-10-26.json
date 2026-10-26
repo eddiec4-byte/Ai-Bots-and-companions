@@ -1,0 +1,58 @@
+{
+  "date": "2026-10-26",
+  "checked": 5,
+  "live": 3,
+  "drop_candidates": [],
+  "products": [
+    {
+      "name": "Aibi",
+      "asin": "B0F1TH7D65",
+      "host": "amazon.com",
+      "status": 200,
+      "unavailable": false,
+      "title": "EMOPET Aibi Pocket Pet - Wearable Robot | ChatGPT Powered AI Companion with Voice Commands, Emotional Interaction, Singing &amp; Dancing | Magnetically Attaches to Anywhere | Ultra Portable",
+      "note": "",
+      "verdict": "LIVE"
+    },
+    {
+      "name": "EmoPet",
+      "asin": "B0DDT2MT9K",
+      "host": "amazon.com",
+      "status": 200,
+      "unavailable": false,
+      "title": "EMOPET AI Desk Robot Companion - ChatGPT Enabled with Voice Commands &amp; Dancing, Interactive AI Robot Pet with Personality, for Adults and Kids",
+      "note": "",
+      "verdict": "LIVE"
+    },
+    {
+      "name": "ZNP Translator",
+      "asin": "B0GZNM6NVD",
+      "host": "amazon.com",
+      "status": 200,
+      "unavailable": null,
+      "title": null,
+      "note": "",
+      "verdict": "UNKNOWN"
+    },
+    {
+      "name": "Plantagotchi",
+      "asin": "B0FZ57DPBJ",
+      "host": "amazon.com",
+      "status": 200,
+      "unavailable": false,
+      "title": "Ivy Interactive AI Desk Companion &amp; Smart Plant Pet Indoor Planter Pink",
+      "note": "",
+      "verdict": "LIVE"
+    },
+    {
+      "name": "umissfunBot",
+      "asin": "B0GH2G2PKQ",
+      "host": "amazon.com",
+      "status": 200,
+      "unavailable": null,
+      "title": null,
+      "note": "",
+      "verdict": "UNKNOWN"
+    }
+  ]
+}
