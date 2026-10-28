@@ -1,0 +1,58 @@
+{
+  "date": "2026-10-28",
+  "checked": 5,
+  "live": 0,
+  "drop_candidates": [],
+  "products": [
+    {
+      "name": "Aibi",
+      "asin": "B0F1TH7D65",
+      "host": "amazon.com",
+      "status": 200,
+      "unavailable": null,
+      "title": null,
+      "note": "",
+      "verdict": "UNKNOWN"
+    },
+    {
+      "name": "EmoPet",
+      "asin": "B0DDT2MT9K",
+      "host": "amazon.com",
+      "status": 200,
+      "unavailable": null,
+      "title": null,
+      "note": "",
+      "verdict": "UNKNOWN"
+    },
+    {
+      "name": "ZNP Translator",
+      "asin": "B0GZNM6NVD",
+      "host": "amazon.com",
+      "status": 200,
+      "unavailable": null,
+      "title": null,
+      "note": "",
+      "verdict": "UNKNOWN"
+    },
+    {
+      "name": "Plantagotchi",
+      "asin": "B0FZ57DPBJ",
+      "host": "amazon.com",
+      "status": 200,
+      "unavailable": null,
+      "title": null,
+      "note": "",
+      "verdict": "UNKNOWN"
+    },
+    {
+      "name": "umissfunBot",
+      "asin": "B0GH2G2PKQ",
+      "host": "amazon.com",
+      "status": 200,
+      "unavailable": null,
+      "title": null,
+      "note": "",
+      "verdict": "UNKNOWN"
+    }
+  ]
+}
